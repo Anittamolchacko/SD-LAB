@@ -1,0 +1,104 @@
+client
+
+import java.io.*;
+import java.net.*; 
+public class client
+{ 
+        public static void main(String[] args) throws IOException 
+{
+      
+                Socket clientSock=new Socket("localhost", 3000);//socket creation 
+                System.out.println("Client connected to the server");
+                //reading from keyboard(keyRead object) 
+                BufferedReader keyRead=new BufferedReader(new InputStreamReader(System.in));
+                OutputStream ostream=clientSock.getOutputStream();//communication stream associated with socket 
+                //sending message to client (pwrite object)
+                PrintWriter pwrite=new PrintWriter(ostream,true);
+                InputStream istream=clientSock.getInputStream();
+                //receiving from server(receiveRead object) 
+                BufferedReader receiveRead=new BufferedReader(new InputStreamReader(istream));
+                System.out.println("to Start the chat, type message and press Enter key"); 
+                String receiveMessage , sendMessage;
+                while(true)
+                {
+                        sendMessage=keyRead.readLine();//keyboard reading 
+                        pwrite.println(sendMessage);//sending to server
+                        System.out.flush();
+                        if((receiveMessage=receiveRead.readLine())!=null)//receive from server 
+                        { 
+                                System.out.println("server:>"+receiveMessage);//displaying message
+                        } 
+                        if(sendMessage.equals("bye"))
+                        {
+                                break;
+                        }
+                }
+                
+        }
+}
+
+
+
+server
+
+
+import java.io.*; 
+import java.net.*; 
+class server
+{ 
+        public static void main(String[] args) throws IOException
+        {
+                ServerSocket serverSock=new ServerSocket(3000);//server socket creation
+                System.out.println("waiting for client.........");
+                Socket socket=serverSock.accept();//listening client connection and accept the connection
+                System.out.println("client connected ");
+                BufferedReader keyRead=new BufferedReader(new InputStreamReader(System.in));//reading from keyboard(keyRead object) 
+                OutputStream ostream=socket.getOutputStream();//sending to client
+                PrintWriter pw=new PrintWriter(ostream,true); 
+                InputStream istream=socket.getInputStream();//receiving from server(istream object)
+                BufferedReader receiveRead=new BufferedReader(new InputStreamReader(istream));//Stream for receiving data from client
+                String receiveMessage,sendMessage;
+                while(true)
+                {
+                        if((receiveMessage=receiveRead.readLine())!= null)
+                        {
+                                System.out.println("client:>"+ receiveMessage);//receive the message from client
+                        }
+
+                        sendMessage=keyRead.readLine();
+                        pw.println(sendMessage);
+                        System.out.flush();//flush the Stream
+                        if(sendMessage.equals("bye"))
+                        {
+                                break;
+                        }       
+                }
+        }
+}
+
+
+output
+
+
+student@T2:~$ javac server.java
+student@T2:~$ java server
+waiting for client.........
+client connected 
+client:>hello
+how are you
+client:>fine
+
+student@T2:~$ gedit client.java
+student@T2:~$ javac client.java
+student@T2:~$ java clien
+Error: Could not find or load main class clien
+student@T2:~$ java client
+Client connected to the server
+to Start the chat, type message and press Enter key
+hello
+server:>how are you
+fine
+
+
+
+

@@ -1,0 +1,41 @@
+student@T2:~$ mkdir ajce
+student@T2:~$ cd ajce
+student@T2:~/ajce$ mkdir mca
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ mkdir lmca
+student@T2:~/ajce/mca$ mkdir rmca
+student@T2:~/ajce/mca$ mkdir intmca
+student@T2:~/ajce/mca$ cd ..
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ ls
+intmca  lmca  rmca
+student@T2:~/ajce/mca$ ls -s
+total 12
+4 intmca  4 lmca  4 rmca
+student@T2:~/ajce/mca$ ls > out.txt
+student@T2:~/ajce/mca$ ls /
+bin    etc             lib         mnt   run   stage2.img  var
+boot   home            lib64       opt   sbin  sys         vmlinuz
+cdrom  initrd.img      lost+found  proc  snap  tmp         vmlinuz.old
+dev    initrd.img.old  media       root  srv   usr
+student@T2:~/ajce/mca$ ls ~
+abin  Desktop    Downloads         Music     Public           snap       Videos
+ajce  Documents  examples.desktop  Pictures  PycharmProjects  Templates  vidoes
+student@T2:~/ajce/mca$ ls ..
+mca
+student@T2:~/ajce/mca$student@T2:~/ajce/mca$ ls ..
+mca
+student@T2:~/ajce/mca$ ls -t
+out.txt  intmca  rmca  lmca
+student@T2:~/ajce/mca$ ls *
+out.txt
+
+intmca:
+
+lmca:
+
+rmca:
+student@T2:~/ajce/mca$ ls -d
+.
+ 
+

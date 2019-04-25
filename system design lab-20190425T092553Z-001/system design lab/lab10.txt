@@ -1,0 +1,711 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ cat >find.txt
+anitta
+anu
+albina
+ajali
+^C
+student@T2:~/ajce/mca/rmca$ find ./rmca -name find.txt 
+find: ‘./rmca’: No such file or directory
+student@T2:~/ajce/mca/rmca$ find ./rmca -name find..txt
+find: ‘./rmca’: No such file or directory
+student@T2:~/ajce/mca/rmca$ find ./rmca -name find.txt
+find: ‘./rmca’: No such file or directory
+student@T2:~/ajce/mca/rmca$ find.txt
+find.txt: command not found
+student@T2:~/ajce/mca/rmca$ pwd
+/home/student/ajce/mca/rmca
+student@T2:~/ajce/mca/rmca$ ls
+anitta.txt   cut1.txt  f2.txt      find.txt  less.txt  paste1.txt
+anu.txt      cut2.txt  file2.txt   g1.txt    lmca      paste2.txt
+capital.txt  cut.txt   file4.txt~  grep.txt  more.txt  paste.txt
+chemistry    f1.txt    file5.txt   intmca    m.txt     state.txt
+student@T2:~/ajce/mca/rmca$  find find.txt
+find.txt
+student@T2:~/ajce/mca/rmca$ find ./rmca -name *.txt 
+find: paths must precede expression: `anu.txt'
+find: possible unquoted pattern after predicate `-name'?
+student@T2:~/ajce/mca/rmca$ find . -name find.txt
+./find.txt
+student@T2:~/ajce/mca/rmca$ find / -name find.txt
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-systemd-resolved.service-3Qa2vG’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-rtkit-daemon.service-dmpclP’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-colord.service-uxj9re’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-bolt.service-YtfQQ0’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-systemd-timesyncd.service-C6gpee’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-fwupd.service-zJKa6p’: Permission denied
+
+^C
+student@T2:~/ajce/mca/rmca$ find ./rmca -name find.txt
+find: ‘./rmca’: No such file or directory
+student@T2:~/ajce/mca/rmca$ find ./lmca -name anju.txt
+./lmca/anju.txt
+student@T2:~/ajce/mca/rmca$ find ~ -name anju.txt
+/home/student/ajce/mca/rmca/lmca/anju.txt
+student@T2:~/ajce/mca/rmca$ find ./lmca -name "*.txt"
+./lmca/anju.txt
+student@T2:~/ajce/mca/rmca$ cd ~
+student@T2:~$ find -perm 777
+./snap/vlc/common/.cache/gio-modules/libgiolibproxy.so
+./snap/vlc/common/.cache/gio-modules/libdconfsettings.so
+./snap/vlc/common/.cache/gio-modules/libgiognutls.so
+./snap/vlc/common/.cache/gio-modules/libgiognomeproxy.so
+./snap/vlc/current
+./snap/vlc/770/.themes
+./snap/vlc/770/.config/gtk-2.0/gtkfilechooser.ini
+./snap/vlc/770/.config/dconf/user
+./snap/vlc/770/.config/ibus/bus
+./snap/vlc/770/.config/gtk-3.0/bookmarks
+./snap/vlc/770/.config/gtk-3.0/settings.ini
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.wm.keybindings.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.thumbnail-cache.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.applications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.location.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.lockdown.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.notifications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.session.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.default-applications.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.app-folders.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.enums.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.datetime.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.media-handling.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/10_gsettings-desktop-schemas.gschema.override
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.screensaver.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.search-providers.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gtk.Settings.ColorChooser.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.locale.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.interface.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.input-sources.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.mouse.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gtk.Settings.FileChooser.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.system.proxy.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.thumbnailers.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.wm.preferences.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.privacy.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.keyboard.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/10_libgtk-3-common.gschema.override
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.a11y.magnifier.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.peripherals.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.background.gschema.xml
+./snap/vlc/770/.local/share/glib-2.0/schemas/org.gnome.desktop.sound.gschema.xml
+./snap/vlc/770/.local/share/themes
+./snap/vlc/770/.local/share/icons/Humanity-Dark/COPYING
+./snap/vlc/770/.local/share/icons/Humanity-Dark/actions@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/actions
+./snap/vlc/770/.local/share/icons/Humanity-Dark/AUTHORS
+./snap/vlc/770/.local/share/icons/Humanity-Dark/places
+./snap/vlc/770/.local/share/icons/Humanity-Dark/places@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/index.theme
+./snap/vlc/770/.local/share/icons/Humanity-Dark/devices
+./snap/vlc/770/.local/share/icons/Humanity-Dark/apps
+./snap/vlc/770/.local/share/icons/Humanity-Dark/devices@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/status@2
+./snap/vlc/770/.local/share/icons/Humanity-Dark/status
+./snap/vlc/770/.local/share/icons/Humanity-Dark/apps@2
+./snap/vlc/770/.local/share/icons/Humanity/COPYING
+./snap/vlc/770/.local/share/icons/Humanity/actions@2
+./snap/vlc/770/.local/share/icons/Humanity/mimes
+./snap/vlc/770/.local/share/icons/Humanity/actions
+./snap/vlc/770/.local/share/icons/Humanity/AUTHORS
+./snap/vlc/770/.local/share/icons/Humanity/mimes@2
+./snap/vlc/770/.local/share/icons/Humanity/places
+./snap/vlc/770/.local/share/icons/Humanity/places@2
+./snap/vlc/770/.local/share/icons/Humanity/index.theme
+./snap/vlc/770/.local/share/icons/Humanity/CONTRIBUTORS
+./snap/vlc/770/.local/share/icons/Humanity/stock@2
+./snap/vlc/770/.local/share/icons/Humanity/devices
+./snap/vlc/770/.local/share/icons/Humanity/emblems
+./snap/vlc/770/.local/share/icons/Humanity/apps
+./snap/vlc/770/.local/share/icons/Humanity/emblems@2
+./snap/vlc/770/.local/share/icons/Humanity/categories@2
+./snap/vlc/770/.local/share/icons/Humanity/devices@2
+./snap/vlc/770/.local/share/icons/Humanity/status@2
+./snap/vlc/770/.local/share/icons/Humanity/categories
+./snap/vlc/770/.local/share/icons/Humanity/stock
+./snap/vlc/770/.local/share/icons/Humanity/animations@2
+./snap/vlc/770/.local/share/icons/Humanity/animations
+./snap/vlc/770/.local/share/icons/Humanity/status
+./snap/vlc/770/.local/share/icons/Humanity/apps@2
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/mimes
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/actions
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/places
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/index.theme
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/apps
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/categories
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/stock
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/animations
+./snap/vlc/770/.local/share/icons/ubuntu-mono-light/status
+./snap/vlc/770/.local/share/icons/breeze-dark/actions
+./snap/vlc/770/.local/share/icons/breeze-dark/places
+./snap/vlc/770/.local/share/icons/breeze-dark/mimetypes
+./snap/vlc/770/.local/share/icons/breeze-dark/index.theme
+./snap/vlc/770/.local/share/icons/breeze-dark/devices
+./snap/vlc/770/.local/share/icons/breeze-dark/applets
+./snap/vlc/770/.local/share/icons/breeze-dark/emblems
+./snap/vlc/770/.local/share/icons/breeze-dark/apps
+./snap/vlc/770/.local/share/icons/breeze-dark/categories
+./snap/vlc/770/.local/share/icons/breeze-dark/emotes
+./snap/vlc/770/.local/share/icons/breeze-dark/animations
+./snap/vlc/770/.local/share/icons/breeze-dark/preferences
+./snap/vlc/770/.local/share/icons/breeze-dark/status
+./snap/vlc/770/.local/share/icons/LoginIcons/index.theme
+./snap/vlc/770/.local/share/icons/LoginIcons/apps
+./snap/vlc/770/.local/share/icons/DMZ-Black/index.theme
+./snap/vlc/770/.local/share/icons/DMZ-Black/cursors
+./snap/vlc/770/.local/share/icons/DMZ-Black/cursor.theme
+./snap/vlc/770/.local/share/icons/DMZ-White/index.theme
+./snap/vlc/770/.local/share/icons/DMZ-White/cursors
+./snap/vlc/770/.local/share/icons/DMZ-White/cursor.theme
+./snap/vlc/770/.local/share/icons/breeze/actions
+./snap/vlc/770/.local/share/icons/breeze/places
+./snap/vlc/770/.local/share/icons/breeze/mimetypes
+./snap/vlc/770/.local/share/icons/breeze/index.theme
+./snap/vlc/770/.local/share/icons/breeze/devices
+./snap/vlc/770/.local/share/icons/breeze/applets
+./snap/vlc/770/.local/share/icons/breeze/emblems
+./snap/vlc/770/.local/share/icons/breeze/apps
+./snap/vlc/770/.local/share/icons/breeze/categories
+./snap/vlc/770/.local/share/icons/breeze/emotes
+./snap/vlc/770/.local/share/icons/breeze/animations
+./snap/vlc/770/.local/share/icons/breeze/preferences
+./snap/vlc/770/.local/share/icons/breeze/status
+./snap/vlc/770/.local/share/icons/hicolor/512x512
+./snap/vlc/770/.local/share/icons/hicolor/128x128
+./snap/vlc/770/.local/share/icons/hicolor/192x192
+./snap/vlc/770/.local/share/icons/hicolor/scalable
+./snap/vlc/770/.local/share/icons/hicolor/index.theme
+./snap/vlc/770/.local/share/icons/hicolor/72x72
+./snap/vlc/770/.local/share/icons/hicolor/16x16
+./snap/vlc/770/.local/share/icons/hicolor/256x256
+./snap/vlc/770/.local/share/icons/hicolor/48x48
+./snap/vlc/770/.local/share/icons/hicolor/96x96
+./snap/vlc/770/.local/share/icons/hicolor/22x22
+./snap/vlc/770/.local/share/icons/hicolor/24x24
+./snap/vlc/770/.local/share/icons/hicolor/64x64
+./snap/vlc/770/.local/share/icons/hicolor/symbolic
+./snap/vlc/770/.local/share/icons/hicolor/36x36
+./snap/vlc/770/.local/share/icons/hicolor/32x32
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/mimes
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/actions
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/places
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/index.theme
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/apps
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/categories
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/stock
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/animations
+./snap/vlc/770/.local/share/icons/ubuntu-mono-dark/status
+./.mozilla/firefox/gfw9z1fz.default/lock
+./.thunderbird/3jzg9b41.default/lock
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ find ./rmca -empty
+./rmca/anu.txt
+./rmca/intmca
+./rmca/anitta.txt
+./rmca/file2.txt
+./rmca/chemistry
+student@T2:~/ajce/mca$ cd ..
+student@T2:~/ajce$ find ./rmca  -perm 664
+find: ‘./rmca’: No such file or directory
+student@T2:~/ajce$ find ./mca  -perm 664
+student@T2:~/ajce$ cd ~
+student@T2:~$ find ./mca  -perm 664
+find: ‘./mca’: No such file or directory
+student@T2:~$ find  -perm 664
+./labexam/factorial.html
+./labexam/small.rb
+./.cache/fontconfig/158c65c810c0d352a587f5be66058e87-le64.cache-7
+./.cache/usb-creator.log
+./.cache/thunderbird/3jzg9b41.default/startupCache/startupCache.8.little
+./.cache/rhythmbox/alternate-toolbar/entryview_db.xml
+./.cache/gnome-software/fwupd/remotes.d/lvfs/metadata.xml.gz
+./.cache/gnome-software/fwupd/remotes.d/lvfs/metadata.xml.gz.asc
+./.cache/gnome-software/shell-extensions/gnome.json
+./.cache/gnome-software/screenshots/112x63/4460d119661bf0f06dc4a0cf8882aba757f7037856f08c608ad4f5260c8ad8f0-image-1_224x168.png
+./.cache/gnome-software/screenshots/112x63/004a9a51c0b01f23fb02e5d0f69b3444804755b0001a952a91e6eaef6192f917-Screenshot_at_Nov_22_15-56-15_U7g4nys.png
+./.cache/gnome-software/screenshots/112x63/d0a9e472260922c3044ee8e611e711f6f07a2877e8298c288b5ce87a980f3892-image-2_224x168.png
+./.cache/gnome-software/screenshots/112x63/3a849fc9e5bff81aa8c5cfd140df2a8361e762d4f521db30dc8860917e4fa19e-brave.jpg
+./.cache/gnome-software/screenshots/112x63/a96ca2ebeca58d8bc742ed292448a7e15cb02c41d8ae3a32aef39b34c3369cf8-Screen_Shot_2017-11-22_at_15.53.42_S8lG3nJ.png
+./.cache/gnome-software/screenshots/752x423/3a849fc9e5bff81aa8c5cfd140df2a8361e762d4f521db30dc8860917e4fa19e-brave.jpg
+./.cache/gnome-software/screenshots/624x351/004a9a51c0b01f23fb02e5d0f69b3444804755b0001a952a91e6eaef6192f917-Screenshot_at_Nov_22_15-56-15_U7g4nys.png
+./.cache/gnome-software/screenshots/624x351/57d6b17e2b2b8decb032aa1f440aa145ff78bc51a2414642c7d9f244a7f1204f-image-1_orig.png
+./.cache/gnome-software/screenshots/624x351/a96ca2ebeca58d8bc742ed292448a7e15cb02c41d8ae3a32aef39b34c3369cf8-Screen_Shot_2017-11-22_at_15.53.42_S8lG3nJ.png
+./.cache/gnome-software/cssresource/435cfac782af78cbf306c54abc19446302a41064-banner_SnScNQI.png
+./.cache/gnome-software/cssresource/5ba0e9b2cc79a8afd469b183a4006929bcc39b00-banner-icon_vWkDBG3.png
+./.cache/gnome-software/cssresource/7ed6277a9d365314e110e32a746f14aaaee41506-banner_wDoKy9V.png
+./.cache/gnome-software/cssresource/e79e533033bdc9e4b9c4534a2d518cf55d6f31b6-banner-icon_azaWnkv.png
+./.cache/gnome-software/icons/efefb4b7836a10162c7c5b9134beac5451a5c838-tmnationsforever.png
+./.cache/gnome-software/icons/9a2416be9513b0183e00ef958e0c8d38892b1109-mars-256_etORXwv.png
+./.cache/gnome-software/icons/8226047cbb057af240e2cbaf9dc1d13d155095f9-webide.ico_HA9tBL0.png
+./.cache/gnome-software/icons/a6d1417cec3ba2148042e49ac96164e39299db64-icon.png
+./.cache/gnome-software/icons/8f70ba7e918a61477b7d1f6b54349373141495a4-hiri-logo-256.png
+./.cache/gnome-software/icons/934f8b3bdb1ab5265e675fe0b3bb90a8ff1b4edb-frf_logo.png
+./.cache/gnome-software/icons/dea56864b753381987084f5e028e8b73e9722716-xonotic_256x.png
+./.cache/gnome-software/icons/3e8292eb4fbe7be80653936d923dffea0a098beb-Icon.ico.png
+./.cache/gnome-software/icons/246c80ec52f2b0a2bc3da4aedb383bfc487478d2-bisq_icon.png
+./.cache/gnome-software/icons/7172c35f9999131b024d7239ed874cbf2229bf79-shotcut-logo-256x256_1.png
+./.cache/gnome-software/icons/f64b67ad6e17f53cdbb8d82309b3cc34b6c59803-chromium-browser.png
+./.cache/gnome-software/icons/1fda18d20714a95e6f3f50b3d1e058b371b147fb-obs-studio.png
+./.cache/gnome-software/icons/69e7bb1f6d448b3278586ecf881842e3cade8ca6-icon_x256.png
+./.cache/gnome-software/icons/0739ad5213c5693404ebd0f1550b07a515969eec-1024snapcraft.png
+./.cache/gnome-software/icons/45793708ff0073e861e40099fa665aec365a898f-icon_app256_1.png
+./.cache/gnome-software/icons/f53de11b2ed4541d9b5ebddbbd696756d588cfeb-oh-my-giraffe_256.png
+./.cache/gnome-software/icons/5c022d3d84c2a3da90749effc2f5edd4acf357d2--NNP9RC0.png
+./.cache/gnome-software/icons/c99f277e3dd19157483ddfc205b82d95021329b9-openra.png
+./.cache/gnome-software/icons/0904c77d45c89301293ba50309ad33ea4b8abfee-supertuxkart-256.png
+./.cache/gnome-software/icons/c23b17ab44a60e90ca1d3850ef6a7476799ae142-icon_24.png
+./.cache/gnome-software/icons/870d9134fd44853e4711a3a224e289b7cbdc209b-reden_logo_transparent_256px.png
+./.cache/gnome-software/icons/e869627a7b90632cc1c4b25b9bab047be148bc8e-Snapcraft_256x256.png
+./.cache/gnome-software/icons/830e5e1c9d02cee5b9d99dbf249466810e517fad-icon_app256_6.png
+./.cache/gnome-software/icons/694fb0f4da1fb6054bd518b1dc92ad6bec937ccc-bitcoin256.png
+./.cache/gnome-software/icons/a0aa36f3b88f47afd1042b64fddb6fdc1943ddc3-org.gnome.Calendar.png
+./.cache/gnome-software/icons/d33e3bbec661b1a959c147dbaf3f8a5dbe99cefb-Icon.png
+./.cache/gnome-software/icons/db4842609aec3f7d14b42a8286f4127db47a2974-foobillardplus.png
+./.cache/gnome-software/icons/cfbec57ff56ce26ab1a70165f25b743e2a65573d-wire-desktop.png
+./.cache/gnome-software/icons/37387856f65e845d1979e64c86f684d4f33900b0-icon_UC0YpfT.png
+./.cache/gnome-software/icons/40c3a25fc3cc331ade6fc6f9c5b585873c34c1e7-icon.svg_YjaXoUU_hfrJiNd.png
+./.cache/gnome-software/icons/e94e7231499ee99f035828400a53c0c20b385118-nr-hex_1.png
+./.cache/gnome-software/icons/295c26f77a4490271b3eafd731d4143089844f7e-bittickerlogo.png
+./.cache/gnome-software/icons/8af67c6b6f66b1ef71682800bfa123f6b9675a88-logo_-_256px.png
+./.cache/gnome-software/icons/640688621450fc6f8332b5daf7fac80e61a03335-aaaa.png
+./.cache/gnome-software/icons/b5db2ea08cf74878484306a87c59c77bf6cd14f1-256x256.png
+./.cache/gnome-software/icons/59ea8935437a83567f2d2cd1a9d6c2d4bb8d0c38-atom-256px.png
+./.cache/gnome-software/icons/ae32388fff6a5c47f91176b502ca2e50112155a6-icon_256x256.png
+./.cache/gnome-software/icons/d8b5a95828b94e270ba18e01c72c10af9d18bfd7-Writefull_256x256.png
+./.cache/gnome-software/icons/81d143aaa21e8bfd3157536d579528325b2665ef-icon.svg_z8cftF6.png
+./.cache/gnome-software/icons/39c38c8a33ac407604b8810a2abde32b12667bcd-logo.png
+./.cache/gnome-software/icons/7a8133f078bf5350df0d56a8d7c53f03c0854d78-shattered-pixel-dungeon.png
+./.cache/gnome-software/icons/3c6246166ad4b05357169ba5ff70805d8046f92f-Freemind_Splash_Butterfly_Modern_256.png
+./.cache/gnome-software/icons/87b9161d12dcafb45a174744e27b481236d0e6ad-warzone2100.large.png
+./.cache/gnome-software/icons/b5fc3b11692c61909a8bc8bb78772091842d3579-hugo-logo-256x256_1.png
+./.cache/gnome-software/icons/56a7fe4a0819f942c28843cf0183354b133bab86-Powershell_black.ico.png
+./.cache/gnome-software/icons/895068db1063e82ec50be18cf63a9bd782415da0-dosbox-x.png
+./.cache/gnome-software/icons/12f14b292de6f43f18915f65d83024fcc9414a2c-icon_pZH83e3.png
+./.cache/gnome-software/icons/11d9466abd110522c3e9d432711ff274c3401597-qalculate256_gj44Mdc.png
+./.cache/gnome-software/icons/547b40172a110e061ce9c9838cabe9a1f0548522-containers.png
+./.cache/gnome-software/icons/7178eca0dae626f79d48f77f6497f40ba5a79307-dragonplayer_dragonplayer.png
+./.cache/gnome-software/icons/8c27c1aaae37761004f225c086834bec8da78025-icon_3mrgAxU.png
+./.cache/gnome-software/icons/8c409c1f5dcdf083035122a12b8991a919dac696-icon.svg_7Eenexu.png
+./.cache/gnome-software/icons/f4dc45bffbbf8e7b46479b5dc2295325d0bdc3c2-icon_22.png
+./.cache/gnome-software/icons/1a465ddb0ef76e1bac52621e13accaaca0e0dc80-gimp.png
+./.cache/gnome-software/icons/e23278dc6fa2e8d93a278250ad883ac6a2ac30c2-snap-icon.png
+./.cache/gnome-software/icons/6158cea33e53356bc1b1d08970d81e794e6bb682-256x256_xkFQhde.png
+./.cache/gnome-software/icons/556bc32258e676ecfe98c411fb0764d7692a735c-supercalc-snap.png
+./.cache/gnome-software/icons/1fcc170cf7245bb889b1482e6909387eee2b7dd4-app_256.png
+./.cache/gnome-software/icons/f9ae1fb5dec311e7d0c6771c2ee10ca3f6265ad0-clementine.png
+./.cache/gnome-software/icons/6152d2f7ea6415f0993eedb0c1d9673397a23466-boa.png
+./.cache/gnome-software/icons/deaefc1afd3bbc33c2a483e574c2066e57459bd4-icon_yAuQgni.png
+./.cache/gnome-software/icons/2158678056483cc6f1c971c1e9acb5b793771880-logo_17_sm.png
+./.cache/gnome-software/icons/9878b4b2d44a871fb9795d20e6d0b36cb972ec4b-xd.png
+./.cache/gnome-software/icons/e0b250bcdf4ae2411c2203f5973069b5f89e4382-256x256.png
+./.cache/gnome-software/icons/754ad5e87c497016f04419460703a8e7dbfee73e-bitcoin256_pshFiKg.png
+./.cache/gnome-software/icons/f18ea17f4b4ffa3d30e2101953bdef306b84e68f-256x256_sOCUiJv.png
+./.cache/gnome-software/icons/c1bf1b69c25520ac42b8f05ceb5f9fbdecfdd351-icon_30.png
+./.cache/gnome-software/icons/1b349316d6805e4f305e4e2d207dad6248bf5a93-LibreOffice-Initial-Artwork-Logo.png
+./.cache/gnome-software/icons/add6bd406402a766b889ec48a49aafbffecc7abd-hisc-apps-kturtle.svg.png
+./.cache/gnome-software/icons/b5eefc8b90685e21fcbfd7110329fe70e7bee642-gedit.png
+./.cache/gnome-software/icons/15b0c38ccb8183cec8603033ef52e561a716728d-lindacoin-wallet1.png
+./.cache/gnome-software/icons/e8a697d257dab3df8c4d4db167fc9d5fafe2224d-Skype.png
+./.cache/gnome-software/icons/72b4257abe4ab1540a07a847e002896ccae6ca5f-moonlight.png
+./.cache/gnome-software/icons/1ae718b1eef045197e5583f57bc6620f5bb7d193-ion256.png
+./.cache/gnome-software/icons/f1d4b28557f33f38d62d13933834f1ca353aa3f3-opentoonz.png
+./.cache/gnome-software/icons/81e3cd771158e41cfa0969eaa3ae88646626f8fb-icon.ico.png
+./.cache/gnome-software/icons/addafd7db48946cd7a21e095d0e2325dbb6df65f-icon.svg.png
+./.cache/gnome-software/icons/05df2e59b062932cbc01d41d30ebb51f50483ae7-icon_w5YGlFC.png
+./.cache/gnome-software/icons/1454fd411f446435f0264dc80ea4dcd7a4fa4b00-evince.png
+./.cache/gnome-software/icons/6d28a10ff5711f82e059a525fcbfeae42ceef4fb-icon_21.png
+./.cache/gnome-software/icons/fbaee540f2ffca754b874c3d9799f1893e4c5529-kpat.svg.png
+./.cache/gnome-software/icons/4d8c1fd87e2f5b4e6c6171cbfe2279fd744858b5-b8a85a31-MicroK8s_SnapStore_icon.png
+./.cache/gnome-software/icons/b16c6cbec2c84e851a7490821964dcbf5a0daafe-icon_256x256_6tATclo.png
+./.cache/gnome-software/icons/bb09826e06999e558434b7f8b0cc2f13ac0fc275-256-GTK_logo.png
+./.cache/gnome-software/icons/daf18640a635eb417f3b0395d4ee018843650531-256x256_S1sji6d.png
+./.cache/gnome-software/icons/fe8d8191f0023ac329f39fa93e4dfd5ae74f4f08-logo-256x256.png
+./.cache/gnome-software/icons/229bca367be22b55d61004772732725d216a83ab-QOwnNotes.png
+./.cache/gnome-software/icons/74d99e74b58f678d809d41553b8222e2e1b523c4-icon_HNpfWXB.png
+./.cache/gnome-software/icons/88de8c9fb4a19bf7979980f672d1867545063d51-icon_6lKgubE.png
+./.cache/gnome-software/icons/87641bcc945147e68363c9e4730b6e8f82303f82-icon_9.png
+./.cache/gnome-software/icons/0e349a546e1d04095c0fd7c734edde2cad19dd19-mutt256.png
+./.cache/gnome-software/icons/b657a895a978145a152d560a4bf50929771c704b-33289952.png
+./.cache/gnome-software/icons/55b802383834c6c766324926659fe71daedd169e-palapeli_9eQYMiV.png
+./.cache/gnome-software/icons/4e763d64d7d04a3b072fcb90e3798530916c6b8a-spotify-linux-256.png
+./.cache/gnome-software/icons/eb32a8f97b4317973f39dc73e75f19dd3fd0aa59-icon.png
+./.cache/gnome-software/icons/64c21cdd914360c5f7e2feaebdd2a4cfe95d1e8f-528860.png
+./.cache/gnome-software/icons/85dc150b4614168002648731bf18bbf62c7312cd-mc-installer-256.png
+./.cache/gnome-software/icons/61e7ecde9f33cf768bce16a5d7135865d793805a-opera_DrRnkh0.png
+./.cache/gnome-software/icons/1672f032442e08898debddd459bb1d9bc6940e76-256x256_6u0RIUd.png
+./.cache/gnome-software/icons/79cd5603b624c0ad68eab74e6e1babf3a6ffd6c3-256-apps-calligrakrita.png
+./.cache/gnome-software/icons/e55e08cc0c673511e8027cf01b6078046e434b1a-icon_dark.ico.png
+./.cache/gnome-software/icons/80b0fded91147145b85b7afe6d89abf9e925f704-icon_JY4ey5r.png
+./.cache/gnome-software/icons/2f2395b4d8a2b57671ee66e584ae1a0172426669-1.png
+./.cache/gnome-software/icons/6f8a84ebd508d551dd77820afb32c9d2dfb9a1a4-brave-256px.png
+./.cache/gnome-software/icons/31d524fab4b39a1bdf83440625be724bfae7cad2-logo256.png
+./.cache/gnome-software/icons/6a08dfa946d9e7fa4200a9cb97b7ac116cccf8a2-icon.svg_uB08EBP.png
+./.cache/gnome-software/icons/cce3c494341bf36f5439cbdd344b24b196b58cd1-256.png
+./.cache/gnome-software/icons/132ddc6dc4f8b457cc6b4967f834c833116d8232-quadrapassel.svg.png
+./.cache/gnome-software/icons/5eaeebb6fc919cbfc5be519624caa89420911956-krdc.svg.png
+./.cache/gnome-software/icons/86ecaa051811a0890573a6fce0324b2989d8e1ed-icon_8EiVfvl.png
+./.cache/gnome-software/icons/770183b6e553071f05f5631b181f1dd15a4b91ab-icon.png
+./.cache/gnome-software/icons/da4c8b3ebf770dd4c7c732e4bbca985c519b1999-Ghost-256px.png
+./.cache/gnome-software/icons/c0cac08604a88607cc63b6dbf459dcc422c5c729-codebreakers.png
+./.cache/gnome-software/icons/4b424b51cb218a70074c2d1ef434c782081d943c-icon_LsecwR2.png
+./.cache/gnome-software/icons/1f25f4f30e71e8f78092a16b04634151356bfe0b-organize-my-files-icon-256x256.png
+./.cache/gnome-software/icons/38127f1541c00a1b1f7dc474e87ef1c0b03b55f9-eqonomize-256.png
+./.cache/gnome-software/icons/30c1ee41aec102c374d146974c527e634bf4a2ba-rsz_app.png
+./.cache/gnome-software/icons/dc7169d1c6b74c7e730cfccc622f8fafa0861b9d-discord.png
+./.cache/gnome-software/icons/066c82b0869d44b1e12fd2864708e319f7cc3750-icon.svg_kZIwL7L.png
+./.cache/gnome-software/icons/0f19306c15b56c6932e9a51acb56ecf63322f0b9-256x256_6ileytI.png
+./.cache/gnome-software/icons/9fa26a20b8378173217ed2a5cd398a24727f7bd2-todoist.png
+./.cache/gnome-software/icons/3811f558710b2b8ca873b4a24da0faf702f95965-ZeroNet_Logo_256.png
+./.cache/gnome-software/icons/b8a9dd9b3dff88938eb07a807ad36c6b14c761ad-icon.ico_Xw0g7WS.png
+./.cache/gnome-software/icons/7ac77d66878d76986ac510bd4c0fb93b4d1d3332-micropolis.png
+./.cache/gnome-software/icons/e1bb2cdfdb36efdc82ccdec09dfca06961e063f1-icon_IzCN8xA.png
+./.cache/gnome-software/icons/891a1e7e827c2803ca262026dfe86a88c42ba2d6-vestin.png
+./.cache/gnome-software/icons/7f77eedb18e3b8d5b249f5fb3ab3dfd8f18c188c-icon.svg_aQ4VnVL.png
+./.cache/gnome-software/icons/89468e71ea45b3cfdce4b940992e7057703ec78b-icon_256_x_256.png
+./.cache/gnome-software/icons/934d15b554644f1b204ddad21c7ed8a8195fd741-sdlpop.png
+./.cache/gnome-software/icons/7ce1db1fd294423284f45bda543ebd9fef07614b-256x256.png
+./.cache/gnome-software/icons/56a5db00f697593b8fef9e80ba6889cf2b435800-256px-Scummvm_icon.svg.png
+./.cache/gnome-software/icons/9938e9a3dc30f2fc33de27559948624b1db6b396-icon_ea8Z5Eb.png
+./.cache/gnome-software/icons/1956bbffb67582609c583036d5329d529f4ce830-simplenote.png
+./.cache/gnome-software/icons/f5dc97838f65c3e020c5a7b1894ffda7c354277d-zenkit-small.png
+./.cache/gnome-software/icons/284144eda27b0a5bf3a31f231edee9488afc2d2c-6fbb3483-snapcraft-default-snap-icon.svg.png
+./.cache/gnome-software/icons/9368ba1143a6068876db83b0b216f600e10c8d3d-Bitcoin_256x256.png
+./.cache/gnome-software/icons/6cc8007614a557fe7009ddb3d63327130069ac39-tome.png
+./.cache/gnome-software/icons/4b9d5083dd4470f2d002d8665a57dfcb302e5c94-icon-256x256.png
+./.cache/gnome-software/icons/52b12dbe5968cd5bcab32b76a281c702255ec179-heimer.png
+./.cache/gnome-software/icons/b9707ff32c42d575802e4ad873243c6361419513-icon_14.png
+./.cache/gnome-software/icons/d0e507d193140cdf5e38dd257dcdb8f38d4f3c56-kalgebra.svg.png
+./.cache/gnome-software/icons/1fcacb39f7555ac8cf94df5bd7b279fdb174bc03-icon256_f9302jP.png
+./.cache/wallpaper/0_5_1366_768_0a54206313b309e572aef3b76a2beece
+./.oracle_jre_usage/9e360713136aba0a.timestamp
+./Downloads/CEHv10_Course_Outline.pdf
+./Downloads/INMCA132 lab 5.docx
+./Downloads/BashNotesForProfessionals.pdf
+./Downloads/INMCA132 lab 6.docx
+./Downloads/INMCA132 lab 4.docx
+./Downloads/BashNotesForProfessionals(1).pdf
+./.xinputrc
+./Desktop/abit/multiplication while.o
+./Desktop/abit/year.o
+./Desktop/abit/sumn while.c
+./Desktop/abit/percentades.o
+./Desktop/abit/alphabets while.c
+./Desktop/abit/heat.o
+./Desktop/abit/swap.c
+./Desktop/abit/relates.o
+./Desktop/abit/multiplication for.c
+./Desktop/abit/palindrome.c
+./Desktop/abit/aphabet.c
+./Desktop/abit/reminder.c
+./Desktop/abit/natural loop.o
+./Desktop/abit/ASCII.c
+./Desktop/abit/evens.c
+./Desktop/abit/calculator.o
+./Desktop/abit/size.c
+./Desktop/abit/count num.o
+./Desktop/abit/summn while.o
+./Desktop/abit/week.c
+./Desktop/abit/armst.o
+./Desktop/abit/relates.c
+./Desktop/abit/squre.o
+./Desktop/abit/average.o
+./Desktop/abit/sum of.o
+./Desktop/abit/sum while.o
+./Desktop/abit/alphabets while.o
+./Desktop/abit/week.o
+./Desktop/abit/even num.c
+./Desktop/abit/size.o
+./Desktop/abit/sum while.c
+./Desktop/abit/Untitled1.ads
+./Desktop/abit/even num.o
+./Desktop/abit/squre.c
+./Desktop/abit/multiplication while.c
+./Desktop/abit/Untitled2.ads
+./Desktop/abit/sum of.c
+./Desktop/abit/odd.c
+./Desktop/abit/multiplication for.o
+./Desktop/abit/swap.o
+./Desktop/abit/odd.o
+./Desktop/abit/natural loop.c
+./Desktop/abit/days.o
+./Desktop/abit/simpleinterest.o
+./Desktop/abit/zero while.o
+./Desktop/abit/calculator.c
+./Desktop/abit/days.c
+./Desktop/abit/reminder.o
+./Desktop/abit/average.c
+./Desktop/abit/count num.c
+./Desktop/abit/percentades.c
+./Desktop/abit/ASCII.o
+./Desktop/abit/simpleinterest.c
+./Desktop/abit/sum of nat no.c
+./Desktop/abit/heat.c
+./Desktop/abit/year.c
+./Desktop/abit/palindrome.o
+./Desktop/abit/evens.o
+./Desktop/abit/armst.c
+./Desktop/abit/sum of nat no.o
+./Desktop/abit/percentages.c
+./Desktop/abit/aphabet.o
+./Desktop/abit/zero while.c
+./lab4
+./.config/gnome-initial-setup-done
+./.config/gtk-2.0/gtkfilechooser.ini
+./.config/gnome-control-center/backgrounds/last-edited-lock.xml
+./.config/gnome-control-center/backgrounds/last-edited.xml
+./.config/libreoffice/4/user/extensions/tmp/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/extensions/tmp/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/extensions/buildid
+./.config/libreoffice/4/user/extensions/shared/lastsynchronized
+./.config/libreoffice/4/user/extensions/shared/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/extensions/shared/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/extensions/bundled/lastsynchronized
+./.config/libreoffice/4/user/extensions/bundled/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/extensions/bundled/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/store/.templdir.cache
+./.config/libreoffice/4/user/config/javasettings_Linux_X86_64.xml
+./.config/libreoffice/4/user/uno_packages/cache/registry/com.sun.star.comp.deployment.configuration.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/uno_packages/cache/registry/com.sun.star.comp.deployment.help.PackageRegistryBackend/backenddb.xml
+./.config/libreoffice/4/user/uno_packages/cache/log.txt
+./.config/nautilus/desktop-metadata
+./.config/user-dirs.locale
+./.config/ibus/bus/065003dcd6e747f1ad7a8f8314244f50-unix-0
+./.config/enchant/en.dic
+./.config/enchant/en.exc
+./.config/gtk-3.0/bookmarks
+./snap/vlc/770/.config/user-dirs.locale
+./.mozilla/firefox/gfw9z1fz.default/revocations.txt
+./.mozilla/firefox/gfw9z1fz.default/serviceworker.txt
+./.mozilla/firefox/gfw9z1fz.default/enumerate_devices.txt
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.cisco.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.cisco.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.techopedia.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.techopedia.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/about+newtab/idb/3312185054sbndi_pspte.files/20
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++pxlclnmdecom-a.akamaihd.net/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++pxlclnmdecom-a.akamaihd.net/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.facebook.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.facebook.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.facebook.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/180/{9c80f86d-0069-472d-a546-f60377074bb4}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/127/{2f6df80b-6596-4f88-89cd-3d047a15307f}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/236/{80adca3f-f780-4d18-8af3-2203dbcca6ec}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/211/{d1b7099a-8587-4004-b573-2fcd516f8ed3}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/114/{9b8e0709-6ca6-45c3-a3c3-9063496b7f72}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/83/{ba80fe53-d80c-4dd9-82db-9d4a874adc53}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/251/{e31db83f-5b65-45c2-964a-7fcaf74226fb}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/224/{5142a83a-1385-4697-86fd-dda5141677e0}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/170/{7f4a8384-c4e5-49b9-95ae-c412af146aaa}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/151/{7faa48f5-e611-4919-adea-1603df794997}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/5/{f8418026-06d9-4e9d-a01c-cb0ac548ca05}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/12/{e868c576-74bd-4b2d-868f-9e96d2d4770c}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/165/{b4fa9cba-e732-4129-8830-2fa5f0dd47a5}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/219/{c1598a4c-8888-4276-aa3c-ab607bf8a5db}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/104/{918f0526-d0f9-4af6-89cd-6ec368a88d68}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/174/{851763c8-6312-4726-8e7f-c5e2f374caae}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/243/{81732870-f80e-4b7c-869d-7f18c704fcf3}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/134/{4569112e-3f39-48b4-955b-4cafd4d7d586}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/252/{43d05079-e5ce-4ce6-b8f7-57a4477e85fc}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/67/{fa3f0167-1757-477e-9404-b09f16232243}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.drivespark.com/cache/morgue/204/{4f3a805a-f3ae-45d9-9680-e708cf73d6cc}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.guru99.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.guru99.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/226/{29072f9c-d8fe-4bc5-92b7-5dcf084599e2}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/226/{e4b7647f-f583-439c-8d45-6f74168393e2}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/180/{618c3470-39cd-457e-9b27-ab8fd61beeb4}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/241/{d4da4cfc-3690-41bc-8b70-1cb5157bd1f1}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/229/{d620287f-a95d-454c-9372-72d54b7865e5}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/168/{9a0c625f-e865-4093-8b5d-ec6de80f04a8}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/156/{d9c1391e-abdc-4701-ac6c-2ab1d72c789c}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/47/{8412320e-113e-42ee-98b6-ed98b481382f}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/236/{7d2bac8a-a109-491e-b5e3-5a79a17cacec}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/60/{c41be88d-c395-4209-bbae-1a7a9b56923c}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/99/{625b5530-bacb-4297-89f6-23240afada63}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/99/{6f2d23af-f1e1-48c8-8a7a-d2214b9bf363}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/160/{29c92d4e-e596-42e0-a7b9-a6253aef3aa0}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/166/{aef50c4c-bbbe-4aeb-94e0-b878b6303da6}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/39/{4a8a4768-0e68-4ae3-a2ab-62174c190627}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/97/{bb18f5ef-0aad-484b-a6ab-97242bcabf61}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/97/{d1b3d0b1-f99a-479d-955c-34a535173b61}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/3/{f0593f56-0cd6-401b-85e9-9f644dc37a03}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/84/{641933fe-9aa8-4e1a-88de-46c01d4fc054}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/48/{a6fb27a9-1a28-4f58-97aa-6e671353cb30}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/83/{228cf9c7-8ad5-4fc2-bf66-76d40429c453}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/164/{f1ede90e-964b-48a0-93c1-64f4190793a4}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/144/{5b71e0e7-1d68-4b43-8d02-b1f744088290}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/141/{d6d11889-905a-4f74-9a41-ea9a35f6d68d}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/72/{b026addd-5acd-47e0-9216-1bf215694048}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/129/{cca9885d-9ad0-4c9e-87e2-533990740081}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/129/{948075d3-06a6-44e0-aff1-2eb677018081}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/222/{5855e2dc-ed2b-4bb3-8627-bbfc03c311de}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/237/{3fb0c713-bc6c-4221-9ed6-c0ce33e083ed}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/7/{1f9277b7-eb75-49fd-a14e-aa1b15990f07}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/217/{b6f51c13-6ceb-49c3-9df3-73c7cc065fd9}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/155/{a1baaa9f-0815-4e44-bea7-ee59ef1f909b}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/85/{41dbf0b1-d967-4e59-8d23-730bcec53a55}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/242/{05846630-c801-4a61-9b85-92d128144ff2}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/16/{a0750e88-18f2-4408-9f4d-0a885750e810}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/119/{4d8a09bd-5aee-4f2c-8a0a-af9dbf603077}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/220/{87d27b0b-50a9-4ec6-88a7-2e20cc18c5dc}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/82/{8738ac6c-482c-46b7-8375-4eb43547c252}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/248/{5edacc39-3686-4d39-8b65-9be56835d4f8}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/106/{9aaa7064-6e05-4891-ab00-9bed2c50c76a}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/205/{9ab62656-e13d-4df3-b9df-b335407081cd}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/19/{e869f5b1-900e-4a9b-8392-4a59d93d4613}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/247/{511f413b-87aa-44fe-a67d-534cf42001f7}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/116/{3ba73580-fbff-4b85-8fc4-a365e2ed5574}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/246/{4a37539c-bf7a-43ab-b164-7c41c44ce1f6}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/201/{b17f9992-2533-459d-b723-a22ab1ce12c9}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/13/{486b17f7-459d-4cf5-b7eb-6a9e966a7a0d}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/13/{530e9ff4-42fb-496b-9c10-5955c00a500d}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/243/{d6819105-01a1-4241-ada3-7679f9432cf3}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/126/{74d2b1cd-f29b-4424-aa7b-cd043e7f447e}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/131/{751192e1-f5df-4847-b0af-96798b906783}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/138/{b2959ada-950e-49f3-b574-1abc99a1678a}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/227/{da6e013c-4cef-4eca-b4dc-b9019b5441e3}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/136/{fd8a3353-c810-4983-8115-030a63879c88}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++mail.google.com/cache/morgue/154/{7745e42b-4230-4272-af8c-5e61fcc2139a}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.zigwheels.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.zigwheels.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.simplilearn.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.simplilearn.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.youtube.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.youtube.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.youtube.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.youtube.com/cache/morgue/17/{1efed133-5934-46bc-a724-4f91aa4a8e11}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.google.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.google.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++azure.microsoft.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++azure.microsoft.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/moz-safe-about+home/idb/3312185054sbndi_pspte.files/10
+./.mozilla/firefox/gfw9z1fz.default/storage/default/moz-safe-about+home/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/moz-safe-about+home/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++news.maxabout.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++news.maxabout.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++drive.google.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++drive.google.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/48/{7c7e29ef-be97-4ccb-a071-7b5bcd13ec30}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/96/{2855f3ce-e132-4b8a-820b-9f09af0f0b60}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/17/{7732dae9-7b71-4be6-b765-8d66359da711}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/103/{1fa54799-801e-4bd5-a0f8-6db0b561bf67}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/4/{bf37c1c1-6c83-4f86-85e8-702ce727a004}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/117/{74882d3c-4c46-4ca0-87e6-3c2f51057875}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.flipkart.com/cache/morgue/199/{d8d14631-0b95-4112-b306-8231d003bcc7}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++auto.ndtv.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++auto.ndtv.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++auto.ndtv.com/cache/.padding
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++auto.ndtv.com/cache/morgue/9/{e6abc064-0246-491d-a445-a6cc3059d709}.final
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.hindustantimes.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++www.hindustantimes.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/http+++firepowerngfw.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/http+++firepowerngfw.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++tpc.googlesyndication.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/default/https+++tpc.googlesyndication.com/.metadata
+./.mozilla/firefox/gfw9z1fz.default/storage/temporary/http+++firepowerngfw.com/.metadata-v2
+./.mozilla/firefox/gfw9z1fz.default/storage/temporary/http+++firepowerngfw.com/.metadata
+./.local/share/icc/edid-9379d946c53b1019d9bd14b897ea47e2.icc
+./.local/share/gnome-settings-daemon/input-sources-converted
+./.local/share/rhythmbox/podcast-timestamp
+./.local/share/rhythmbox/playlists.xml
+./.local/share/rhythmbox/rhythmdb.xml
+./.local/share/session_migration-ubuntu
+./.local/share/gnome-shell/notifications
+./.local/share/gnome-shell/application_state
+./.local/share/app-info/xmls/extensions-web.xml
+./Documents/ROLL NO:2.pptx
+./.thunderbird/profiles.ini
+./.thunderbird/3jzg9b41.default/virtualFolders.dat
+./.thunderbird/3jzg9b41.default/SiteSecurityServiceState.txt
+./.thunderbird/3jzg9b41.default/revocations.txt
+./.thunderbird/3jzg9b41.default/abook.mab
+./.thunderbird/3jzg9b41.default/.parentlock
+./.thunderbird/3jzg9b41.default/history.mab
+./.thunderbird/3jzg9b41.default/AlternateServices.txt
+./.thunderbird/3jzg9b41.default/SecurityPreloadState.txt
+./sd lab/lab7.txt
+student@T2:~$ find /-type d -name rmca
+find: ‘/-type’: No such file or directory
+find: ‘d’: No such file or directory
+student@T2:~$ cdajce
+cdajce: command not found
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ find /-type d -name rmca
+find: ‘/-type’: No such file or directory
+find: ‘d’: No such file or directory
+student@T2:~/ajce/mca$ find / -type d -name rmca
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-systemd-resolved.service-3Qa2vG’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-rtkit-daemon.service-dmpclP’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-colord.service-uxj9re’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-bolt.service-YtfQQ0’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-systemd-timesyncd.service-C6gpee’: Permission denied
+find: ‘/tmp/systemd-private-cd5c3ddd65df4b3fb16f169fb1ede7da-fwupd.service-zJKa6p’: Permission denied
+^C
+student@T2:~/ajce/mca$ cd lmca
+student@T2:~/ajce/mca/lmca$ cat >fi.c
+qwe
+wer
+ert
+^C
+student@T2:~/ajce/mca/lmca$ cat >f2.c
+^C
+student@T2:~/ajce/mca/lmca$ cat >f3.c
+1
+2
+3
+4
+^C
+student@T2:~/ajce/mca/lmca$ 
+student@T2:~/ajce/mca/lmca$ $ tar cvf file.tar *.c
+$: command not found
+student@T2:~/ajce/mca/lmca$  tar cvf file.tar *.c
+f2.c
+f3.c
+fi.c
+student@T2:~/ajce/mca/lmca$ $ tar czvf file.tar *.c
+$: command not found
+student@T2:~/ajce/mca/lmca$  tar czvf file.tar *.c
+f2.c
+f3.c
+fi.c
+student@T2:~/ajce/mca/lmca$ ls
+f2.c  f3.c  fi.c  file.tar
+student@T2:~/ajce/mca/lmca$  tar -xzvf archive.tar.gz
+tar (child): archive.tar.gz: Cannot open: No such file or directory
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+student@T2:~/ajce/mca/lmca$ tar -xzvf file.tar *.c
+f2.c
+f3.c
+fi.c
+student@T2:~/ajce/mca/lmca$  cd .. 
+student@T2:~/ajce/mca$ tar -czvf file.tar.gz lmca
+lmca/
+lmca/file.tar
+lmca/f2.c
+lmca/fi.c
+lmca/f3.c
+student@T2:~/ajce/mca$ ls
+file3.txt  file.tar.gz  intmca  lmca  rmca
+student@T2:~/ajce/mca$ cd 123
+student@T2:~/ajce/mca/123$ tar -xzvf file.tar.gz
+lmca/
+lmca/file.tar
+lmca/f2.c
+lmca/fi.c
+lmca/f3.c
+student@T2:~/ajce/mca/123$ man tar
+student@T2:~/ajce/mca/123$

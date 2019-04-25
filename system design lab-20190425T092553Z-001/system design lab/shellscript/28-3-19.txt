@@ -1,0 +1,179 @@
+1)
+echo -e "Enter the number"
+read a
+read b
+if [ $a -eq $b ]
+then
+echo "Numbers are equals"
+elif [ $a -lt $b ]
+then 
+echo "b is largest"
+else
+echo "a is largest"
+fi
+output:
+
+chmod +x prg15.sh
+student@T2:~$ ./prg15.sh
+Enter the number
+2
+3
+b is largest
+student@T2:~$ ./prg15.sh
+Enter the number
+2
+2
+Numbers are equals
+
+
+2)
+ 
+echo "Enter Number"
+read n
+x=$(( $n %2 ))
+if [ $x -eq 0 ]
+then
+echo "$n is even number"
+else
+echo "$n is odd number"
+fi
+
+output:
+
+chmod +x prg16.sh
+student@T2:~$ ./prg16.sh
+Enter Number
+5
+5 is odd number
+student@T2:~$ ./prg16.sh
+Enter Number
+3
+3 is odd number
+student@T2:~$ ./prg16.sh
+Enter Number
+8
+8 is even number
+
+
+3)
+
+echo "Enter Year"
+read y
+
+if (( $y % 4 == 0 ))
+
+then
+echo "$y is Leap year"
+else
+echo "$y is not a leap year"
+fi
+
+output:
+
+ gedit prg17.sh
+student@T2:~$ chmod +x prg17.sh
+student@T2:~$ ./prg17.sh
+Enter Year
+2019
+ is not a leap year
+student@T2:~$ ./prg17.sh
+Enter Year
+2019
+2019 is not a leap year
+student@T2:~$ ./prg17.sh
+Enter Year
+1996
+1996 is Leap year
+student@T2:~$ 
+
+4)
+
+echo "Enter the Number"
+read n
+for (( i=1; i<=10; i++ ))
+do
+a=$(( $i * n ))
+echo "$i * $n=$a"
+done
+
+output:
+
+Enter the Number
+7
+1 * 7=7
+2 * 7=14
+3 * 7=21
+4 * 7=28
+5 * 7=35
+6 * 7=42
+7 * 7=49
+8 * 7=56
+9 * 7=63
+10 * 7=70
+
+5)
+
+echo "Enter a Number:"
+read a
+ 
+rev=0
+sd=0
+or=$a
+ 
+while [ $a -gt 0 ]
+do
+        sd=`expr $a % 10`
+        temp=`expr $rev \* 10`
+        rev=`expr $temp + $sd`
+        a=`expr $a / 10`
+done
+ 
+echo "Reverse of $or is $rev"
+
+output:
+
+chmod +x prg19.sh
+student@T2:~$ ./prg19.sh
+Enter a Number:
+6754369
+Reverse of 6754369 is 9634576
+
+
+6)
+
+echo "Enter the number"
+read a
+i=2
+z=0
+while [ $i -lt $a ]
+do
+s=`expr $a % $i`
+if [ $s -eq $z ]
+then
+echo "not prime"
+exit
+else
+i=`expr $i + 1`
+fi
+done
+echo "Prime number"
+
+output
+
+ chmod +x prr20.sh
+student@T2:~$ ./prr20.sh
+Enter the number
+4
+not prime
+student@T2:~$ ./prr20.sh
+Enter the number
+2
+Prime number
+student@T2:~$ ./prr20.sh
+Enter the number
+34
+not prime
+
+
+
+

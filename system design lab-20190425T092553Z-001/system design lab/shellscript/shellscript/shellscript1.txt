@@ -1,0 +1,108 @@
+student@T2:~$ vi anitta.sh
+student@T2:~$ chmod +x anitta.sh
+student@T2:~$ ./anitta.sh
+./anitta.sh: line 4: iecho: command not found
+student@T2:~$ ./anitta.sh
+./anitta.sh: line 4: iecho: command not found
+student@T2:~$ gedit ani.sh
+student@T2:~$ chmod +x ani.sh
+student@T2:~$ ./ani.sh
+hello
+student@T2:~$ vi sample.sh
+student@T2:~$ ./sample.sh
+bash: ./sample.sh: Permission denied
+student@T2:~$ chmod +x sample.sh
+student@T2:~$ ./sample.sh
+elcome ajce
+student@T2:~$ gedit firstscript.sh
+student@T2:~$ chmod +x firstscript.sh
+student@T2:~$ ./firstscript.sh
+hello world!
+The date today is Thu Mar 21 14:31:20 IST 2019
+The current directory is pwd
+student@T2:~$ gedit firstscript.sh
+student@T2:~$ ./firstscript.sh
+hello world!
+The date today is Thu Mar 21 14:35:42 IST 2019
+The current directory is /home/student
+student@T2:~$ gedit pg1.sh
+student@T2:~$ chmod +x pg1.sh
+student@T2:~$ ./pg1.sh
+value of var is test string
+student@T2:~$ gedit pg2.sh
+student@T2:~$ chmod +x pg2.sh
+student@T2:~$ ./pg2.sh
+value of var is $var
+student@T2:~$ gedit pg3.sh
+student@T2:~$ chmod +x pg3.sh
+student@T2:~$ ./pg3.sh
+./pg3.sh: line 1: echoThe command is ./pg3.sh: No such file or directory
+./pg3.sh: line 2: echoThe commmand is : command not found
+./pg3.sh: line 3: echoThe command is : command not found
+./pg3.sh: line 4: echoThe command is : command not found
+./pg3.sh: line 5: echoThe command is : command not found
+student@T2:~$ gedit pg3.sh
+student@T2:~$ gedit pg3.sh 10 20 30 40
+student@T2:~$ ./pg3.sh 10 20 30 40
+./pg3.sh: line 1: echoThe command is ./pg3.sh: No such file or directory
+./pg3.sh: line 2: echoThe commmand is 10: command not found
+./pg3.sh: line 3: echoThe command is 20: command not found
+./pg3.sh: line 4: echoThe command is 30: command not found
+./pg3.sh: line 5: echoThe command is 40: command not found
+student@T2:~$ gedit pg3.sh 
+student@T2:~$ ./pg3.sh 10 20 30 40
+The command is ./pg3.sh
+The commmand is 10
+The command is 20
+The command is 30
+The command is 40
+student@T2:~$ gedit pg3.sh 
+student@T2:~$ ./pg3 a b c d
+bash: ./pg3: No such file or directory
+student@T2:~$ ./pg3.sh  a b c d
+The command is 4
+The commmand is ./pg3.sh
+The command is a b c d
+The command is a b c d
+student@T2:~$ gedit pg3.sh 
+student@T2:~$ gedit pg4.sh
+student@T2:~$ chmod +x pg4.sh
+student@T2:~$ ./pg4.sh
+
+
+student@T2:~$ gedit pg5.sh
+student@T2:~$ chmod +x pg5.sh
+student@T2:~$ ./pg5.sh
+5+10=15
+student@T2:~$ gedit pg5.sh
+student@T2:~$ gedit pg6.sh
+student@T2:~$ chmod +x pg6.sh
+student@T2:~$ ./pg6.sh
+Enter two numbers:xy45
+ +  = 0
+student@T2:~$ gedit pg6.sh
+student@T2:~$ chmod +x pg6.sh
+student@T2:~$ ./pg6.sh
+Enter two numbers:23
+23 +  = 23
+student@T2:~$ gedit pg6.sh
+student@T2:~$ chmod +x pg6.sh
+student@T2:~$ ./pg6.sh
+Enter two numbers:4 5
+4+5 = 9
+student@T2:~$ gedit pg7.sh
+student@T2:~$ chmod +x pg7.sh
+student@T2:~$ ./pg7.sh
+./pg7.sh: line 3: ech: command not found
+student@T2:~$ gedit pg7.sh
+student@T2:~$ ./pg7.sh
+./pg7.sh: line 3: ech: command not found
+student@T2:~$ gedit pg7.sh
+student@T2:~$ ./pg7.sh
+Sum is 10+20
+student@T2:~$ gedit pg7.sh
+student@T2:~$ ./pg7.sh
+Sum is 30
+student@T2:~$ ^C
+student@T2:~$ 
+

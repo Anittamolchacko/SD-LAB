@@ -1,0 +1,122 @@
+student@T2:~$ gedit prg8.sh
+student@T2:~$ chmod +x prg8.sh
+student@T2:~$ ./prg8.sh
+enter a number:6
+./prg8.sh: line 3: [6: command not found
+./prg8.sh: line 6: [6: command not found
+positive
+student@T2:~$ chmod +x prg8.sh
+student@T2:~$ ./prg8.sh
+enter a number:-6
+./prg8.sh: line 3: [-6: command not found
+./prg8.sh: line 6: [-6: command not found
+positive
+student@T2:~$ gedit prg8.sh
+student@T2:~$ chmod +x prg8.sh
+student@T2:~$ ./prg8.sh
+enter a number:4
+positive
+student@T2:~$ ./prg8.sh
+enter a number:-6
+negative
+student@T2:~$ ./prg8.sh
+enter a number:0
+zero
+student@T2:~$ gedit prg9.sh
+student@T2:~$ chmod +x prg9.sh
+student@T2:~$ ./prg9.sh
+./prg9.sh: line 1: [: ==: unary operator expected
+./prg9.sh: line 4: [: ==: unary operator expected
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ ./prg9.sh monday
+./prg9.sh: line 1: [monday: command not found
+./prg9.sh: line 4: [monday: command not found
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ gedit prg9.sh
+student@T2:~$ ./prg9.sh monday
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ ./prg9.sh 
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ gedit prg9.sh
+student@T2:~$ ./prg9.sh 
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ ./prg9.sh monday
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ chmod +x prg9.sh
+student@T2:~$ ./prh9.sh
+bash: ./prh9.sh: No such file or directory
+student@T2:~$ ./prg9.sh
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ ./prg9.sh monday
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ gedit prg9.sh
+student@T2:~$ ./prg9.sh Monday
+The Typed argument is Monday
+student@T2:~$ ./prg9.sh Tuesday
+The typed argument is Tuesday
+student@T2:~$ ./prg9.sh 
+Typed arguments is neither Monday or Tuesday
+student@T2:~$ gedit prg10.sh
+student@T2:~$ chmod +x prg10.sh
+student@T2:~$ ./prg10.sh
+ 5 is 15
+ 5 is 10
+ 5 is 25
+ 5 is 35
+student@T2:~$ gedit prg10.sh
+student@T2:~$ ./prg10.sh
+3 times 5 is 15
+2 times 5 is 10
+5 times 5 is 25
+7 times 5 is 35
+student@T2:~$ gedit prg11.sh
+student@T2:~$ chmod +x prg11.sh
+student@T2:~$ ./prg11.sh
+welcome { times
+welcome 1..5 times
+welcome } times
+student@T2:~$ gedit prg11.sh
+student@T2:~$ ./prg11.sh
+welcome 1 times
+welcome 2 times
+welcome 3 times
+welcome 4 times
+welcome 5 times
+student@T2:~$ ./prg10.sh
+3 times 5 is 15
+2 times 5 is 10
+5 times 5 is 25
+7 times 5 is 35
+student@T2:~$ gedit prg11.sh
+student@T2:~$ chmod +x prg11.sh
+student@T2:~$ ./prg11.sh
+welcome 1 times
+welcome 3 times
+welcome 5 times
+welcome 7 times
+welcome 9 times
+student@T2:~$ gedit prg11.sh
+student@T2:~$ ./prg11.sh
+welcome 0 times
+welcome 2 times
+welcome 4 times
+welcome 6 times
+welcome 8 times
+welcome 10 times
+student@T2:~$ gedit prg11.sh
+student@T2:~$ gedit prg12.sh
+student@T2:~$ chmod +x prg12.sh
+student@T2:~$ ./prg12.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+student@T2:~$ gedit prg12.sh
+student@T2:~$ ./prg12.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+Welcome 5 times
+student@T2:~$ 
+

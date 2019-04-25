@@ -1,0 +1,215 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cdmca
+cdmca: command not found
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd /
+student@T2:/$ cdajce
+cdajce: command not found
+student@T2:/$ cd ajce
+bash: cd: ajce: No such file or directory
+student@T2:/$ `
+> 
+> cd `
+student@T2:/$ cd ~
+student@T2:~$ cdajce
+cdajce: command not found
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ ls-a>fi.txt
+ls-a: command not found
+student@T2:~/ajce/mca/rmca$ ls-a>anitta.txt
+ls-a: command not found
+student@T2:~/ajce/mca/rmca$ ls-a >anitta.txt
+ls-a: command not found
+student@T2:~/ajce/mca/rmca$ wc - l>anitta.txt
+^C  
+student@T2:~/ajce/mca/rmca$ wc - l>capital.txt
+^C
+student@T2:~/ajce/mca/rmca$ ls - a>anitta.txt
+ls: cannot access '-': No such file or directory
+ls: cannot access 'a': No such file or directory
+student@T2:~/ajce/mca/rmca$ ls -a > anitta.txt
+student@T2:~/ajce/mca/rmca$ wc -l > f1.txt
+anitta
+albu
+anjali
+^C
+student@T2:~/ajce/mca/rmca$ wc -l > f22.txt
+albu
+albi
+alb
+^C
+student@T2:~/ajce/mca/rmca$ wc -l > f22.txt
+^C
+student@T2:~/ajce/mca/rmca$ wc -l > f23.txt
+alb
+anitta
+akku
+^C
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+student@T2:~/ajce/mca/rmca$ cat > f23.txt
+hjgjh
+jhjhjh
+jj
+^C
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+hjgjh
+jhjhjh
+jj
+student@T2:~/ajce/mca/rmca$ wc -l > f23.txt
+^C
+student@T2:~/ajce/mca/rmca$ wc -l  f23.txt
+0 f23.txt
+student@T2:~/ajce/mca/rmca$ wc  f23.txt
+0 0 0 f23.txt
+student@T2:~/ajce/mca/rmca$ wc -l  f23.txt
+0 f23.txt
+student@T2:~/ajce/mca/rmca$ ls -a > f24.txt
+student@T2:~/ajce/mca/rmca$ wc -l  f24.txt
+30 f24.txt
+student@T2:~/ajce/mca/rmca$ wc -ls  f24.txt
+wc: invalid option -- 's'
+Try 'wc --help' for more information.
+student@T2:~/ajce/mca/rmca$ wc -l <   f24.txt
+30
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+student@T2:~/ajce/mca/rmca$ cat f23
+cat: f23: No such file or directory
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+student@T2:~/ajce/mca/rmca$ cat f23.txt
+1
+2
+3
+4
+5
+student@T2:~/ajce/mca/rmca$ cat f23.txt > fabc123
+student@T2:~/ajce/mca/rmca$ ls
+anitta.txt   cut2.txt  f24.txt     file5.txt  intmca    paste1.txt
+anu.txt      cut.txt   f2.txt      find.txt   less.txt  paste2.txt
+capital.txt  f1.txt    fabc123     fi.txt     lmca      paste.txt
+chemistry    f22.txt   file2.txt   g1.txt     more.txt  state.txt
+cut1.txt     f23.txt   file4.txt~  grep.txt   m.txt
+student@T2:~/ajce/mca/rmca$ ls > fls
+student@T2:~/ajce/mca/rmca$ wc -l > f33
+^C
+student@T2:~/ajce/mca/rmca$ wc - l > f33
+^C
+student@T2:~/ajce/mca/rmca$ ls - a >f.txt
+ls: cannot access '-': No such file or directory
+ls: cannot access 'a': No such file or directory
+student@T2:~/ajce/mca/rmca$ ls -a >f.txt
+student@T2:~/ajce/mca/rmca$ wc -l >f.txt
+qwer
+ert
+dgg
+rty
+^C
+student@T2:~/ajce/mca/rmca$ wc -l <f.txt
+0
+student@T2:~/ajce/mca/rmca$ wc -l >f.txt
+^C
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ ls -l
+total 96
+-rw-r--r-- 1 student student  227 Mar 14 14:48 anitta.txt
+-rw-r--r-- 1 student student    0 Feb 14 21:20 anu.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:46 capital.txt
+drwxr-xr-x 2 student student 4096 Feb 14 21:29 chemistry
+-rw-r--r-- 1 student student   17 Feb 16 18:00 cut1.txt
+-rw-r--r-- 1 student student   23 Feb 18 17:11 cut2.txt
+-rw-r--r-- 1 student student   28 Feb 16 17:43 cut.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:49 f1.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:52 f22.txt
+-rw-r--r-- 1 student student   10 Mar 14 15:02 f23.txt
+-rw-r--r-- 1 student student  251 Mar 14 14:56 f24.txt
+-rw-r--r-- 1 student student   20 Feb 16 17:02 f2.txt
+-rw-r--r-- 1 student student    0 Mar 14 15:07 f33
+-rw-r--r-- 1 student student   10 Mar 14 15:03 fabc123
+-rw-r--r-- 1 student student    0 Feb 14 21:21 file2.txt
+-rw-r--r-- 1 student student   28 Feb 11 17:26 file4.txt~
+-rw-r--r-- 1 student student   28 Feb 11 17:30 file5.txt
+-rw-r--r-- 1 student student   24 Mar 11 11:48 find.txt
+-rw-r--r-- 1 student student    0 Mar 14 14:42 fi.txt
+-rw-r--r-- 1 student student  258 Mar 14 15:04 fls
+-rw-r--r-- 1 student student    0 Mar 14 15:21 f.txt
+-rw-r--r-- 1 student student   30 Mar  7 15:25 g1.txt
+-rw-r--r-- 1 student student   59 Mar  7 15:20 grep.txt
+drwxr-xr-x 2 student student 4096 Feb 11 17:52 intmca
+-rw-r--r-- 1 student student  176 Feb 21 20:39 less.txt
+drwxr-xr-x 2 student student 4096 Feb 16 17:34 lmca
+-rw-r--r-- 1 student student 2458 Feb 21 20:21 more.txt
+-rw-r--r-- 1 student student  224 Feb 21 20:42 m.txt
+-rw-r--r-- 1 student student   40 Feb 18 17:16 paste1.txt
+-rw-r--r-- 1 student student   10 Feb 18 17:17 paste2.txt
+-rw-r--r-- 1 student student   34 Feb 18 17:16 paste.txt
+-rw-r--r-- 1 student student  299 Feb 25 16:58 state.txt
+student@T2:~/ajce/mca/rmca$ ls -l anitta.txt
+-rw-r--r-- 1 student student 227 Mar 14 14:48 anitta.txt
+student@T2:~/ajce/mca/rmca$ chmod u=x,g=rwx,o=r anitta.txt
+student@T2:~/ajce/mca/rmca$ cat anitta.txt
+cat: anitta.txt: Permission denied
+student@T2:~/ajce/mca/rmca$ chmod u=r,g=rw,o=r anitta.txt
+student@T2:~/ajce/mca/rmca$ cat anitta.txt
+.
+..
+anitta.txt
+anu.txt
+capital.txt
+chemistry
+cut1.txt
+cut2.txt
+cut.txt
+f1.txt
+f2.txt
+file2.txt
+file4.txt~
+file5.txt
+find.txt
+fi.txt
+g1.txt
+grep.txt
+intmca
+less.txt
+lmca
+more.txt
+m.txt
+paste1.txt
+paste2.txt
+paste.txt
+state.txt
+student@T2:~/ajce/mca/rmca$ chmod u=4,g=7,o=4 cut2.txt
+chmod: invalid mode: ‘u=4,g=7,o=4’
+Try 'chmod --help' for more information.
+student@T2:~/ajce/mca/rmca$ chmod 114 anitta.txt
+student@T2:~/ajce/mca/rmca$ chmod u+r,g+w,o+x anitta.txt
+student@T2:~/ajce/mca/rmca$ chmod 174 anitta.txt
+student@T2:~/ajce/mca/rmca$ chmod 777 anitta.txt
+student@T2:~/ajce/mca/rmca$ wc -l users
+wc: users: No such file or directory
+student@T2:~/ajce/mca/rmca$ wc -l >users
+asdfg
+sdf
+sgh
+student@T2:~/ajce/mca/rmca$ cat fls.txt | more
+cat: fls.txt: No such file or directory
+student@T2:~/ajce/mca/rmca$ cat f.txt | more
+sdfg
+sdfgb
+dfgn
+fgbn
+fvgb
+fv
+bdf
+v 
+fvb 
+def
+d
+fg
+fgh
+student@T2:~/ajce/mca/rmca$ cat f.txt | head -2 | tail -2
+sdfg
+sdfgb
+student@T2:~/ajce/mca/rmca$ 
+

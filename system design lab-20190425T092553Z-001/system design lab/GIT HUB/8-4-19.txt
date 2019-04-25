@@ -1,0 +1,116 @@
+student@T2:~$ git init firtrepo
+Initialized empty Git repository in /home/student/firtrepo/.git/
+student@T2:~$ cd firstrepo
+bash: cd: firstrepo: No such file or directory
+student@T2:~$ git init AnittaFirst
+Initialized empty Git repository in /home/student/AnittaFirst/.git/
+student@T2:~$ cd AnittaFirst
+student@T2:~/AnittaFirst$ git config--global user.name "anitta"
+git: 'config--global' is not a git command. See 'git --help'.
+student@T2:~/AnittaFirst$ git config --global user.name "Anittamolchacko"
+student@T2:~/AnittaFirst$ git config --global user.email "anittamolchacko@mca.ajce.in"
+student@T2:~/AnittaFirst$ git init myTest
+Initialized empty Git repository in /home/student/AnittaFirst/myTest/.git/
+student@T2:~/AnittaFirst$ cd myTest
+student@T2:~/AnittaFirst/myTest$ gedit README
+student@T2:~/AnittaFirst/myTest$ gedit sample.c
+student@T2:~/AnittaFirst/myTest$ git add README
+student@T2:~/AnittaFirst/myTest$ git add sample.c
+student@T2:~/AnittaFirst/myTest$ git commit -m "commit the program"
+[master (root-commit) 907cbec] commit the program
+ 2 files changed, 9 insertions(+)
+ create mode 100644 README
+ create mode 100644 sample.c
+student@T2:~/AnittaFirst/myTest$ git remote add orgin https://github.com/Anittamolchacko/AnittaFirst.git
+student@T2:~/AnittaFirst/myTest$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T2:~/AnittaFirst/myTest$ git remote add origin https://github.com/Anittamolchacko/AnittaFirst.git
+student@T2:~/AnittaFirst/myTest$ git push origin master
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 340 bytes | 340.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/Anittamolchacko/AnittaFirst.git
+ * [new branch]      master -> master
+student@T2:~/AnittaFirst/myTest$ git clone https://github.com/Anittamolchacko/AnittaFirst.git
+Cloning into 'AnittaFirst'...
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+student@T2:~/AnittaFirst/myTest$ git log
+commit 907cbec0da9596fd6ea31ed873ed26a128327664 (HEAD -> master, origin/master)
+Author: Anittamolchacko <anittamolchacko@mca.ajce.in>
+Date:   Mon Apr 8 12:05:40 2019 +0530
+
+    commit the program
+student@T2:~/AnittaFirst/myTest$ git branch branch1
+student@T2:~/AnittaFirst/myTest$ git branch branch2
+student@T2:~/AnittaFirst/myTest$ git checkout branch1
+Switched to branch 'branch1'
+student@T2:~/AnittaFirst/myTest$ git branch -d branch2
+Deleted branch branch2 (was 907cbec).
+student@T2:~/AnittaFirst/myTest$ git push origin branch1
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/Anittamolchacko/AnittaFirst/pull/new/branch1
+remote: 
+To https://github.com/Anittamolchacko/AnittaFirst.git
+ * [new branch]      branch1 -> branch1
+student@T2:~/AnittaFirst/myTest$ git branch branch3
+student@T2:~/AnittaFirst/myTest$ git push origin branch3
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anittamolchacko/AnittaFirst.git/'
+student@T2:~/AnittaFirst/myTest$ git branch branch3
+fatal: A branch named 'branch3' already exists.
+student@T2:~/AnittaFirst/myTest$ git push origin branch3
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch3' on GitHub by visiting:
+remote:      https://github.com/Anittamolchacko/AnittaFirst/pull/new/branch3
+remote: 
+To https://github.com/Anittamolchacko/AnittaFirst.git
+ * [new branch]      branch3 -> branch3
+student@T2:~/AnittaFirst/myTest$ git -d branch3
+unknown option: -d
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+student@T2:~/AnittaFirst/myTest$ git branch -d branch3
+Deleted branch branch3 (was 907cbec).
+student@T2:~/AnittaFirst/myTest$ git merge origin master
+merge: origin - not something we can merge
+student@T2:~/AnittaFirst/myTest$ git fetch  merge origin master
+fatal: 'merge' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T2:~/AnittaFirst/myTest$ git fetch  origin master
+From https://github.com/Anittamolchacko/AnittaFirst
+ * branch            master     -> FETCH_HEAD
+student@T2:~/AnittaFirst/myTest$ git  merge origin/ master
+merge: origin/ - not something we can merge
+student@T2:~/AnittaFirst/myTest$ git pull origin master
+From https://github.com/Anittamolchacko/AnittaFirst
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+student@T2:~/AnittaFirst/myTest$ 
+

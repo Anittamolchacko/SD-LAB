@@ -1,0 +1,54 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ pwd
+/home/student/ajce/mca/rmca
+student@T2:~/ajce/mca/rmca$ cat >grep.txt
+hello all 
+how r u
+all r keeping well
+hii
+kooi
+what about u
+^C
+student@T2:~/ajce/mca/rmca$ grep "all" grep.txt
+hello all
+all r keeping well
+student@T2:~/ajce/mca/rmca$ cat >g1.txt
+hello all 
+welcome ajce
+family
+^C
+student@T2:~/ajce/mca/rmca$ grep "hello" grep.txt g1.txt
+grep.txt:hello all
+g1.txt:hello all
+student@T2:~/ajce/mca/rmca$ grep -i "all" grep.txt
+hello all
+all r keeping well
+student@T2:~/ajce/mca/rmca$ grep -w 'all|hello' grep.txt g1.txt 
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ man grep
+student@T2:~/ajce/mca/rmca$ grep -B2 "u" grep.txt
+hello all
+how r u
+--
+hii
+kooi
+what about u
+student@T2:~/ajce/mca/rmca$ grep -A2 "u" grep.txt
+how r u
+all r keeping well
+hii
+--
+what about u
+student@T2:~/ajce/mca/rmca$ grep -B2 "uE" grep.txt
+student@T2:~/ajce/mca/rmca$ grep -B2 "e" grep.txt
+hello all
+how r u
+all r keeping well
+student@T2:~/ajce/mca/rmca$ grep -c "hello" grep.txt
+1
+student@T2:~/ajce/mca/rmca$ grep -n "hello" grep.txt
+1:hello all
+student@T2:~/ajce/mca/rmca$ 
+

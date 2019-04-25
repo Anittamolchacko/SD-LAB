@@ -1,0 +1,115 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$  cd rmca
+student@T2:~/ajce/mca/rmca$ man rm
+student@T2:~/ajce/mca/rmca$ cat >f1.txt
+1
+2
+3
+4
+e
+^C
+student@T2:~/ajce/mca/rmca$ f2.txt
+f2.txt: command not found
+student@T2:~/ajce/mca/rmca$ cat >f2.txt
+wer
+efr
+cfr
+ert
+dfg
+rtt^C
+student@T2:~/ajce/mca/rmca$ wc f1.txt
+ 5  5 10 f1.txt
+student@T2:~/ajce/mca/rmca$ wc -l f1.txt
+5 f1.txt
+student@T2:~/ajce/mca/rmca$ wc -c f2.txt
+20 f2.txt
+student@T2:~/ajce/mca/rmca$ wc -m f2.txt
+20 f2.txt
+student@T2:~/ajce/mca/rmca$ man wc
+student@T2:~/ajce/mca/rmca$ wc -L f1.txt
+1 f1.txt
+student@T2:~/ajce/mca/rmca$ wc -L f2.txt
+3 f2.txt
+student@T2:~/ajce/mca/rmca$ man wc
+student@T2:~/ajce/mca/rmca$ man wc
+student@T2:~/ajce/mca/rmca$ wc -c f1.txt
+10 f1.txt
+student@T2:~/ajce/mca/rmca$ wc -m f1.txt
+10 f1.txt
+student@T2:~/ajce/mca/rmca$ wc -w f1.txt
+5 f1.txt
+student@T2:~/ajce/mca/rmca$ mv -b anju.txt lmca
+student@T2:~/ajce/mca/rmca$ ls
+anitta.txt  chemistry  f2.txt     file4.txt~  intmca
+anu.txt     f1.txt     file2.txt  file5.txt   lmca
+student@T2:~/ajce/mca/rmca$ cd..
+cd..: command not found
+student@T2:~/ajce/mca/rmca$ cd ..
+student@T2:~/ajce/mca$ cd ls
+bash: cd: ls: No such file or directory
+student@T2:~/ajce/mca$ cd lmca
+student@T2:~/ajce/mca/lmca$ ls
+student@T2:~/ajce/mca/lmca$ cd rmca
+bash: cd: rmca: No such file or directory
+student@T2:~/ajce/mca/lmca$ cd ..
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ cat >cut.txt
+anitta
+anjali
+albina
+anjana
+^C
+student@T2:~/ajce/mca/rmca$ cut -c4 cut.txt
+t
+a
+i
+a
+student@T2:~/ajce/mca/rmca$ cut -c4,2,1 cut.txt
+ant
+ana
+ali
+ana
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ cut -b cut.txt
+cut: invalid byte/character position ‘cut.txt’
+Try 'cut --help' for more information.
+student@T2:~/ajce/mca/rmca$ cut -b a cut.txt
+cut: invalid byte/character position ‘a’
+Try 'cut --help' for more information.
+student@T2:~/ajce/mca/rmca$ cut -b1 cut.txt
+a
+a
+a
+a
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ cut -b5 cut.txt
+t
+l
+n
+n
+student@T2:~/ajce/mca/rmca$ cut -f1 cut.txt
+anitta
+anjali
+albina
+anjana
+student@T2:~/ajce/mca/rmca$ cat > cut1.txt
+hello	anju	wlcme
+^C
+student@T2:~/ajce/mca/rmca$ cut -f1 cut.txt
+anitta
+anjali
+albina
+anjana
+student@T2:~/ajce/mca/rmca$ cut -f1 cut1.txt
+hello
+student@T2:~/ajce/mca/rmca$ cut -f2 cut1.txt
+anju
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ man cut
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ 
+

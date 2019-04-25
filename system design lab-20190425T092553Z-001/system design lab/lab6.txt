@@ -1,0 +1,93 @@
+student@T2:~/ajce/mca/rmca$ cat >paste.txt
+anitta
+anjali
+albina
+tintu
+nathi
+     
+^C
+student@T2:~/ajce/mca/rmca$ cat >paste1.txt
+chamathachal
+kannur
+kottayam
+pala
+kochi
+^C
+student@T2:~/ajce/mca/rmca$ cat >paste2.txt
+1
+2
+3
+4
+5
+^C
+student@T2:~/ajce/mca/rmca$ paste paste.txt paste1.txt paste2.txt
+anitta	chamathachal	1
+anjali	kannur	2
+albina	kottayam	3
+tintu	pala	4
+nathi	kochi	5
+		
+student@T2:~/ajce/mca/rmca$ paste -d ","paste.txt paste1.txt paste2.txt
+chamathachal,1
+kannur,2
+kottayam,3
+pala,4
+kochi,5
+student@T2:~/ajce/mca/rmca$ paste -d "," paste.txt paste1.txt paste2.txt
+anitta,chamathachal,1
+anjali,kannur,2
+albina,kottayam,3
+tintu,pala,4
+nathi,kochi,5
+,,
+student@T2:~/ajce/mca/rmca$ paste -s "," paste.txt paste1.txt paste2.txt
+paste: ,: No such file or directory
+anitta	anjali	albina	tintu	nathi	
+chamathachal	kannur	kottayam	pala	kochi
+1	2	3	4	5
+student@T2:~/ajce/mca/rmca$ paste -s-d ":" paste.txt paste1.txt paste2.txt
+paste: invalid option -- '-'
+Try 'paste --help' for more information.
+student@T2:~/ajce/mca/rmca$ paste -s -d ":" paste.txt paste1.txt paste2.txt
+anitta:anjali:albina:tintu:nathi:
+chamathachal:kannur:kottayam:pala:kochi
+1:2:3:4:5
+student@T2:~/ajce/mca/rmca$ paste ... <paste.txt
+paste: ...: No such file or directory
+student@T2:~/ajce/mca/rmca$ paste - - - <paste.txt
+anitta	anjali	albina
+tintu	nathi	
+student@T2:~/ajce/mca/rmca$ paste - -  <paste.txt
+anitta	anjali
+albina	tintu
+nathi	
+student@T2:~/ajce/mca/rmca$ man paste
+student@T2:~/ajce/mca/rmca$ paste - - vpaste.txt
+paste: vpaste.txt: No such file or directory
+student@T2:~/ajce/mca/rmca$ paste - - v paste.txt
+paste: v: No such file or directory
+student@T2:~/ajce/mca/rmca$ paste - -v paste.txt
+paste: invalid option -- 'v'
+Try 'paste --help' for more information.
+student@T2:~/ajce/mca/rmca$ paste -d "/,"paste.txt paste1.txt paste2.txt
+chamathachal/1
+kannur/2
+kottayam/3
+pala/4
+kochi/5
+student@T2:~/ajce/mca/rmca$ paste -d "/ , "paste.txt paste1.txt paste2.txt
+chamathachal/1
+kannur/2
+kottayam/3
+pala/4
+kochi/5
+student@T2:~/ajce/mca/rmca$ paste --v
+paste (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by David M. Ihnat and David MacKenzie.
+student@T2:~/ajce/mca/rmca$ 
+

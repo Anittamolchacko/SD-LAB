@@ -1,0 +1,164 @@
+student@T2:~$ git  config --global user.name "Anittamolchacko"
+student@T2:~$ git  config --global user.email "anittamolchacko@mca.ajce.in
+> 
+> ^C
+student@T2:~$ git  config --global user.email "anittamolchacko@mca.ajce.in
+"
+student@T2:~$ git init Anittasecond
+Initialized empty Git repository in /home/student/Anittasecond/.git/
+student@T2:~$ git clone https://dzone.com/articles/top-20-git-commands-with-examples
+Cloning into 'top-20-git-commands-with-examples'...
+fatal: repository 'https://dzone.com/articles/top-20-git-commands-with-examples/' not found
+student@T2:~$ git add poject
+fatal: not a git repository (or any of the parent directories): .git
+student@T2:~$ cd Anittasecond
+student@T2:~/Anittasecond$ git init myproject
+Initialized empty Git repository in /home/student/Anittasecond/myproject/.git/
+student@T2:~/Anittasecond$ cd myproject
+student@T2:~/Anittasecond/myproject$ gedit README
+student@T2:~/Anittasecond/myproject$ gedi text1.c
+
+Command 'gedi' not found, did you mean:
+
+  command 'edi' from snap edi (1.17)
+  command 'gedit' from deb gedit
+
+See 'snap info <snapname>' for additional versions.
+
+student@T2:~/Anittasecond/myproject$ gedit text1.c
+student@T2:~/Anittasecond/myproject$ git add myproject.c
+fatal: pathspec 'myproject.c' did not match any files
+student@T2:~/Anittasecond/myproject$ 
+student@T2:~/Anittasecond/myproject$ git add myproject
+fatal: pathspec 'myproject' did not match any files
+student@T2:~/Anittasecond/myproject$ git add text1.c
+student@T2:~/Anittasecond/myproject$ git commit -m "successfull the program"
+[master (root-commit) f1993bc] successfull the program
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text1.c
+student@T2:~/Anittasecond/myproject$ git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+student@T2:~/Anittasecond/myproject$ git remote add origin https://github.com/Anittamolchacko/Anittasecond
+student@T2:~/Anittasecond/myproject$ git push origin master username for 'http://github.com':Anittamolchacko
+error: src refspec username does not match any.
+error: src refspec for does not match any.
+error: src refspec http://github.com does not match any.
+error: failed to push some refs to 'https://github.com/Anittamolchacko/Anittasecond'
+student@T2:~/Anittasecond/myproject$ git commit -m "successfull the program"
+On branch master
+Untracked files:
+	README
+
+nothing added to commit but untracked files present
+student@T2:~/Anittasecond/myproject$ git push origin master
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 263 bytes | 263.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Anittamolchacko/Anittasecond
+ * [new branch]      master -> master
+student@T2:~/Anittasecond/myproject$ git branch b1;
+student@T2:~/Anittasecond/myproject$ git add *;
+student@T2:~/Anittasecond/myproject$ git push origin master
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Everything up-to-date
+student@T2:~/Anittasecond/myproject$ git push -u orgin b1
+fatal: 'orgin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+student@T2:~/Anittasecond/myproject$ git push -u origin b1
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/Anittamolchacko/Anittasecond/'
+student@T2:~/Anittasecond/myproject$ git push -u origin b1
+Username for 'https://github.com': Anittamolchacko
+Password for 'https://Anittamolchacko@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'b1' on GitHub by visiting:
+remote:      https://github.com/Anittamolchacko/Anittasecond/pull/new/b1
+remote: 
+To https://github.com/Anittamolchacko/Anittasecond
+ * [new branch]      b1 -> b1
+Branch 'b1' set up to track remote branch 'b1' from 'origin'.
+student@T2:~/Anittasecond/myproject$ git checkout b1
+A	README
+Switched to branch 'b1'
+Your branch is up to date with 'origin/b1'.
+student@T2:~/Anittasecond/myproject$ git branch
+* b1
+  master
+student@T2:~/Anittasecond/myproject$ git pull https://github.com/Anittamolchacko/Anittasecond.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Anittamolchacko/Anittasecond
+ * branch            HEAD       -> FETCH_HEAD
+Updating f1993bc..70628e2
+Fast-forward
+ text1.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T2:~/Anittasecond/myproject$ git fetch
+From https://github.com/Anittamolchacko/Anittasecond
+   f1993bc..70628e2  master     -> origin/master
+student@T2:~/Anittasecond/myproject$ git diff
+student@T2:~/Anittasecond/myproject$ git fetch origin
+student@T2:~/Anittasecond/myproject$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Anittamolchacko/Anittasecond
+   70628e2..6308aa7  master     -> origin/master
+student@T2:~/Anittasecond/myproject$ git diff
+student@T2:~/Anittasecond/myproject$ git fetch origin master
+From https://github.com/Anittamolchacko/Anittasecond
+ * branch            master     -> FETCH_HEAD
+student@T2:~/Anittasecond/myproject$ git merge origin/master
+Updating 70628e2..6308aa7
+Fast-forward
+ text1.c | 1 +
+ 1 file changed, 1 insertion(+)
+student@T2:~/Anittasecond/myproject$ git diff
+student@T2:~/Anittasecond/myproject$ git fetch origin master
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/Anittamolchacko/Anittasecond
+ * branch            master     -> FETCH_HEAD
+   6308aa7..9ade7e2  master     -> origin/master
+student@T2:~/Anittasecond/myproject$ git diff origin master origin/master
+fatal: ambiguous argument 'origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+student@T2:~/Anittasecond/myproject$ git diff master origin/master
+diff --git a/text1.c b/text1.c
+index d8a3f9f..3c056bd 100644
+--- a/text1.c
++++ b/text1.c
+@@ -1 +1,4 @@
+ welcome amal jyothi college of engineerig
++anittamolchacko
++keezhangattu
++kochi
+student@T2:~/Anittasecond/myproject$ 

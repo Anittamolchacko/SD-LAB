@@ -1,0 +1,106 @@
+student@T2:~$ mkdir ajce
+student@T2:~$ cd ajce
+student@T2:~/ajce$ mkdir mca
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ mkdir rmca
+student@T2:~/ajce/mca$ mkdir intmca
+student@T2:~/ajce/mca$ mkdir lmca
+student@T2:~/ajce/mca$ man cp
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ cat >file1.txt
+apple
+grapes
+orange^C
+student@T2:~/ajce/mca/rmca$ cat >file2.txt
+hello
+kooi
+hai
+hii
+^C
+student@T2:~/ajce/mca/rmca$ cat >file3.txt
+pea
+laddiesfinger
+papaya
+^C
+student@T2:~/ajce/mca/rmca$ cp file1.txt file2.txt
+student@T2:~/ajce/mca/rmca$ cat file2.txt
+apple
+grapes
+student@T2:~/ajce/mca/rmca$ ls file2.txt
+file2.txt
+student@T2:~/ajce/mca/rmca$ ls
+file1.txt  file2.txt  file3.txt
+student@T2:~/ajce/mca/rmca$ man cp
+student@T2:~/ajce/mca/rmca$ cp -R file1.txt file2.txt
+student@T2:~/ajce/mca/rmca$ cat file2.txt
+apple
+grapes
+student@T2:~/ajce/mca/rmca$ cp -i file1.txt file2.txt
+cp: overwrite 'file2.txt'? 
+student@T2:~/ajce/mca/rmca$ cp -r file1.txt file2.txt
+student@T2:~/ajce/mca/rmca$ cat file1.txt
+apple
+grapes
+student@T2:~/ajce/mca/rmca$ cat >file4.txt
+anitta
+anjali
+anjana
+albina
+^C          
+student@T2:~/ajce/mca/rmca$ cp file4.txt file5.txt
+student@T2:~/ajce/mca/rmca$ ls
+file1.txt  file2.txt  file3.txt  file4.txt  file5.txt
+student@T2:~/ajce/mca/rmca$ cp -R lmca intmca rmca
+cp: target 'rmca' is not a directory
+student@T2:~/ajce/mca/rmca$ cd mca
+bash: cd: mca: No such file or directory
+student@T2:~/ajce/mca/rmca$ cd~
+
+Command 'cd~' not found, did you mean:
+
+  command 'cdi' from deb cdo
+  command 'cd5' from deb cd5
+  command 'cdp' from deb irpas
+  command 'cdb' from deb tinycdb
+  command 'cde' from deb cde
+  command 'cdo' from deb cdo
+  command 'cdw' from deb cdw
+  command 'cdv' from deb codeville
+
+Try: apt install <deb name>
+
+student@T2:~/ajce/mca/rmca$ cd ~
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cp -R lmca intmca rmca
+student@T2:~/ajce/mca$ ls
+intmca  lmca  rmca
+student@T2:~/ajce/mca$ cp file3.txt lmca
+cp: cannot stat 'file3.txt': No such file or directory
+student@T2:~/ajce/mca$ cp -b file3.txt file4.txt
+cp: cannot stat 'file3.txt': No such file or directory
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ cp -b file3.txt file4.txt
+student@T2:~/ajce/mca/rmca$ cat file4.txt
+pea
+laddiesfinger
+papaya
+student@T2:~/ajce/mca/rmca$ cp -i file3.txt file4.txt
+cp: overwrite 'file4.txt'? n
+student@T2:~/ajce/mca/rmca$ cat file4.txt
+pea
+laddiesfinger
+papaya
+student@T2:~/ajce/mca/rmca$ cp -i file2.txt file4.txt
+cp: overwrite 'file4.txt'? n           
+student@T2:~/ajce/mca/rmca$ cat file4.txt
+pea
+laddiesfinger
+papaya
+student@T2:~/ajce/mca/rmca$ cp -i file2.txt file4.txt
+cp: overwrite 'file4.txt'? y
+student@T2:~/ajce/mca/rmca$ cat file4.txt
+apple
+grapes
+student@T2:~/ajce/mca/rmca$ 
+

@@ -1,0 +1,157 @@
+student@T2:~$ echo $LOGNAME
+student
+student@T2:~$ echo $HOSTNAME
+T2
+student@T2:~$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin
+student@T2:~$ echo $PWD
+/home/student
+student@T2:~$ echo $USERNAME
+student
+student@T2:~$ echo $LANG
+en_IN
+student@T2:~$ echo $SHELL
+/bin/bash
+student@T2:~$ echo $MACHTYPE
+x86_64-pc-linux-gnu
+student@T2:~$ echo $UID
+1001
+
+student@T2:~$ echo $EDITOR
+
+
+
+
+
+QUESTION-1
+
+
+i=10
+while test "$i" -gt 0
+do
+i=`expr $i - 1`
+echo $i
+done
+
+
+output:
+
+
+gedit prg25.sh
+student@T2:~$ ./prg25.sh
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+
+question 2
+
+n=1
+while [ $n -le 10 ]
+do
+echo $n
+n=`expr $n + 1`
+done
+
+output:
+ 
+
+gedit prg26.sh
+student@T2:~$ ./prg26.sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+question 3
+
+i=1
+sum=0
+while [ "$i" -le 10 ]
+do
+echo Adding $i into sum.
+sum=`expr $sum + $i`
+i=`expr $i + 1`
+done
+echo the sum is $sum
+
+
+output:
+
+gedit prg27.sh
+student@T2:~$ ./prg27.sh
+Adding 1 into sum.
+Adding 2 into sum.
+Adding 3 into sum.
+Adding 4 into sum.
+Adding 5 into sum.
+Adding 6 into sum.
+Adding 7 into sum.
+Adding 8 into sum.
+Adding 9 into sum.
+Adding 10 into sum.
+the sum is 55
+
+question:
+
+echo "Enter a number"
+read num
+
+fact=1
+
+while [ $num -gt 1 ]
+do
+  fact=$((fact * num))  
+  num=$((num - 1))      
+done
+
+echo $fact
+
+
+output:
+
+ gedit prg28.sh
+student@T2:~$ chmod +x prg28.sh
+student@T2:~$ ./prg28.sh
+Enter a number
+5
+120
+
+
+question
+
+N=6 
+a=0 
+b=1  
+   
+echo "The Fibonacci series is : "
+   
+for (( i=0; i<N; i++ )) 
+do
+    echo -n "$a "
+    fn=$((a + b)) 
+    a=$b 
+    b=$fn 
+done
+
+
+output:
+
+ ./prg29.sh
+The Fibonacci series is : 
+0 1 1 2 3 5 
+
+

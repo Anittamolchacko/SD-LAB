@@ -1,0 +1,167 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ man expr
+student@T2:~/ajce/mca/rmca$ expr `12-3`
+12-3: command not found
+expr: missing operand
+Try 'expr --help' for more information.
+student@T2:~/ajce/mca/rmca$ expr 20 
+20
+student@T2:~/ajce/mca/rmca$ expr 20 +10
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ expr 20 + 10
+30
+student@T2:~/ajce/mca/rmca$ expr 20 \* 2
+40
+student@T2:~/ajce/mca/rmca$ expr 20 - 2
+18
+student@T2:~/ajce/mca/rmca$ expr 20 % 2
+0
+student@T2:~/ajce/mca/rmca$ echo "Enter two numbers"
+Enter two numbers
+student@T2:~/ajce/mca/rmca$ read a
+read b
+student@T2:~/ajce/mca/rmca$ sum= `expr $a + $b`
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ sum =`expr $a + $b`
+expr: syntax error
+sum: '=': No such file or directory
+student@T2:~/ajce/mca/rmca$ a=10
+student@T2:~/ajce/mca/rmca$ a=`expr $a + 2`
+student@T2:~/ajce/mca/rmca$ echo $a
+12
+student@T2:~/ajce/mca/rmca$ echo "enter two numbers
+> ^C
+student@T2:~/ajce/mca/rmca$ echo "enter two numbers"
+enter two numbers
+student@T2:~/ajce/mca/rmca$ read x
+resad y
+student@T2:~/ajce/mca/rmca$ sum=`expr $y + $y`
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ sum=`expr $y + $y`
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ sum=`expr $y + $x`
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ sum=`expr $y + $x`
+expr: syntax error
+student@T2:~/ajce/mca/rmca$ echo"enter 2 numbers"
+echoenter 2 numbers: command not found
+student@T2:~/ajce/mca/rmca$ echo "entertwo numbers"
+entertwo numbers
+student@T2:~/ajce/mca/rmca$ read a
+10
+student@T2:~/ajce/mca/rmca$ read b
+20
+student@T2:~/ajce/mca/rmca$ sum=`expr $a + $b`
+student@T2:~/ajce/mca/rmca$ echo $sum
+30
+student@T2:~/ajce/mca/rmca$ echo "enter two number"
+enter two number
+student@T2:~/ajce/mca/rmca$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+student@T2:~/ajce/mca/rmca$ man expr
+student@T2:~/ajce/mca/rmca$ a=anittamolchacko
+student@T2:~/ajce/mca/rmca$ b=`expr length $a`
+student@T2:~/ajce/mca/rmca$ echo $b
+15
+student@T2:~/ajce/mca/rmca$ q=amljyotycollegeofenginering
+student@T2:~/ajce/mca/rmca$ p=`expr substr $q 1 6`
+student@T2:~/ajce/mca/rmca$ echo $q
+amljyotycollegeofenginering
+student@T2:~/ajce/mca/rmca$ echo $p
+amljyo
+student@T2:~/ajce/mca/rmca$ read a
+12
+student@T2:~/ajce/mca/rmca$ read b
+12
+student@T2:~/ajce/mca/rmca$ res=`expr $a = $b`
+student@T2:~/ajce/mca/rmca$ echo $res
+1
+student@T2:~/ajce/mca/rmca$ read a
+2    
+student@T2:~/ajce/mca/rmca$ read b
+4
+student@T2:~/ajce/mca/rmca$ res=`expr $a = $b`
+student@T2:~/ajce/mca/rmca$ echo $res
+0
+student@T2:~/ajce/mca/rmca$ read a
+12
+student@T2:~/ajce/mca/rmca$ read b
+12
+student@T2:~/ajce/mca/rmca$ res=`expr $a = $b`
+student@T2:~/ajce/mca/rmca$ echo $res
+1
+student@T2:~/ajce/mca/rmca$ read a
+2    
+student@T2:~/ajce/mca/rmca$ read b
+4
+student@T2:~/ajce/mca/rmca$ res=`expr $a = $b`
+student@T2:~/ajce/mca/rmca$ echo $res
+0
+student@T2:~/ajce/mca/rmca$ read a
+12
+student@T2:~/ajce/mca/rmca$ read b
+12
+student@T2:~/ajce/mca/rmca$ c=`expr $a \< $b`
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ echo $c
+0
+student@T2:~/ajce/mca/rmca$ read a
+2    
+student@T2:~/ajce/mca/rmca$ read b
+23    
+student@T2:~/ajce/mca/rmca$ c=`expr $a \< $b`
+student@T2:~/ajce/mca/rmca$ echo $c
+1
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ 
+

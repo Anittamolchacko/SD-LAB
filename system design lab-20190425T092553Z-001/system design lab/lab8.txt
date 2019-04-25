@@ -1,0 +1,210 @@
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ man head
+student@T2:~/ajce/mca/rmca$ cat >state.txt
+ndhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+^C
+student@T2:~/ajce/mca/rmca$ head state.txt
+ndhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T2:~/ajce/mca/rmca$ head -n 5 state.txt
+ndhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+student@T2:~/ajce/mca/rmca$ head -c 6 state.txt
+ndhra student@T2:~/ajce/mca/rmca$ head -c 6 state.txt
+ndhra student@T2:~/ajce/mca/rmca$ head -c 4 state.txt
+ndhrstudent@T2:~/ajce/mca/rmca$ head -v state.txt
+==> state.txt <==
+ndhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+student@T2:~/ajce/mca/rmca$ man head
+student@T2:~/ajce/mca/rmca$ man tail
+student@T2:~/ajce/mca/rmca$ man head
+student@T2:~/ajce/mca/rmca$ cat >capital.txt
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+^C
+student@T2:~/ajce/mca/rmca$ head -q  state.txt capital.txt
+ndhra Pradesh
+Arunachal Pradesh
+Assam
+Bihar
+Chhattisgarh
+Goa
+Gujarat
+Haryana
+Himachal Pradesh
+Jammu and Kashmir
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+student@T2:~/ajce/mca/rmca$  head -n 20 state.txt | tail -10
+Jharkhand
+Karnataka
+Kerala
+Madhya Pradesh
+Maharashtra
+Manipur
+Meghalaya
+Mizoram
+Nagaland
+Odisha
+student@T2:~/ajce/mca/rmca$ tail state.txt
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T2:~/ajce/mca/rmca$ tail -n 3 state.txt
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T2:~/ajce/mca/rmca$ tail -c 6 state.txt
+engal
+student@T2:~/ajce/mca/rmca$ tail -c -6 state.txt
+engal
+student@T2:~/ajce/mca/rmca$ tail -c 5 state.txt
+ngal
+student@T2:~/ajce/mca/rmca$ tail state.txt capital.txt
+==> state.txt <==
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+
+==> capital.txt <==
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T2:~/ajce/mca/rmca$ tail -v state.txt
+==> state.txt <==
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+student@T2:~/ajce/mca/rmca$  tail -f state.txt
+Odisha
+Punjab
+Rajasthan
+Sikkim
+Tamil Nadu
+Telangana
+Tripura
+Uttar Pradesh
+Uttarakhand
+West Bengal
+^C
+student@T2:~/ajce/mca/rmca$ tail --version
+tail (GNU coreutils) 8.28
+Copyright (C) 2017 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Paul Rubin, David MacKenzie, Ian Lance Taylor,
+and Jim Meyering.
+student@T2:~/ajce/mca/rmca$ tail -n 7 state.txt | sort -r
+West Bengal
+Uttar Pradesh
+Uttarakhand
+Tripura
+Telangana
+Tamil Nadu
+Sikkim
+

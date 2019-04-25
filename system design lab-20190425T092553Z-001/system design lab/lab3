@@ -1,0 +1,204 @@
+student@T2:~$ touch ajce
+student@T2:~$ cd mca
+bash: cd: mca: No such file or directory
+student@T2:~$ cd ajce
+student@T2:~/ajce$ cd mca
+student@T2:~/ajce/mca$ cd rmca
+student@T2:~/ajce/mca/rmca$ cat sample.txt
+welcome ajce
+student@T2:~/ajce/mca/rmca$ cat > file1.txt
+1
+2
+3
+hi
+hello
+2
+
+
+
+56y7
+^C
+student@T2:~/ajce/mca/rmca$ cat file1.txt
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat file1.txt mytext1.txt
+1
+2
+3
+hi
+hello
+2
+
+56y7
+hai
+student@T2:~/ajce/mca/rmca$ cat file1.text >mytext1.txt
+cat: file1.text: No such file or directory
+student@T2:~/ajce/mca/rmca$ cat file1.txt >mytext1.txt
+student@T2:~/ajce/mca/rmca$ cat file1.txt sample.txt >newfile.txt
+student@T2:~/ajce/mca/rmca$ cat newfile.txt
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+welcome ajce
+student@T2:~/ajce/mca/rmca$ cat mytext1.txt
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat -n file1.txt
+     1	1
+     2	2
+     3	3
+     4	hi
+     5	hello
+     6	2
+     7	
+     8	
+     9	56y7
+student@T2:~/ajce/mca/rmca$ cat file1.txt >> sample.txt
+student@T2:~/ajce/mca/rmca$ ct sample.txt
+ct: command not found
+student@T2:~/ajce/mca/rmca$ cat sample.txt
+welcome ajce
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat file1.txt; cat sample.txt; 
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+welcome ajce
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat -s file1.txt
+1
+2
+3
+hi
+hello
+2
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat file1.txt
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ sample1.txt
+sample1.txt: command not found
+student@T2:~/ajce/mca/rmca$ cat sample1.txt
+cat: sample1.txt: No such file or directory
+student@T2:~/ajce/mca/rmca$ cat sample.txt
+welcome ajce
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat -s sample.txt
+welcome ajce
+1
+2
+3
+hi
+hello
+2
+
+56y7
+student@T2:~/ajce/mca/rmca$ man cat
+student@T2:~/ajce/mca/rmca$ 
+student@T2:~/ajce/mca/rmca$ cat -v sample.txt
+welcome ajce
+1
+2
+3
+hi
+hello
+2
+
+
+56y7
+student@T2:~/ajce/mca/rmca$ cat -n file1.txt
+     1	1
+     2	2
+     3	3
+     4	hi
+     5	hello
+     6	2
+     7	
+     8	
+     9	56y7
+student@T2:~/ajce/mca/rmca$ cat -b file1.txt
+     1	1
+     2	2
+     3	3
+     4	hi
+     5	hello
+     6	2
+
+
+     7	56y7
+student@T2:~/ajce/mca/rmca$ mv 
+file1.txt    mytext1.txt  newfile.txt  sample.txt   
+student@T2:~/ajce/mca/rmca$ mv file1.txt sample.txt
+student@T2:~/ajce/mca/rmca$ ls
+mytext1.txt  newfile.txt  sample.txt
+student@T2:~/ajce/mca/rmca$ cat > file2.txt
+hai
+^Z
+[1]+  Stopped                 cat > file2.txt
+student@T2:~/ajce/mca/rmca$ mv file2.txt ..
+student@T2:~/ajce/mca/rmca$ ls
+ mytext1.txt   newfile.txt   sample.txt  'Untitled Document 1'
+student@T2:~/ajce/mca/rmca$ cd ..
+student@T2:~/ajce/mca$ mv file2.txt lmca
+student@T2:~/ajce/mca$ mv *.txt lmca
+student@T2:~/ajce/mca$ 
+
+
